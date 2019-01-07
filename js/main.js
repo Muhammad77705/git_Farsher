@@ -3,10 +3,6 @@ $(function(){
     $('.banner_carousel_items').slick({
     infinite: true,
     dots: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    dots:true,
-    arrows: true,
     appendArrows:'.nav_banner',
     appendDots:'.nav_banner'
   });

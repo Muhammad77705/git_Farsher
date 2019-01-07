@@ -64,20 +64,24 @@ html {
 .container,
 .nav_banner {
 	max-width: none;
-	width: 80%;
+	width: 85%;
+}
+
+.nav_li {
+	margin: 30px 24px;
+}
+
+.nav_li:hover {
+  margin: 30px 24px 0;
+	padding-bottom: 30px;
+}
+
+.nav_li:first-child {
+	margin-left: 0;
 }
 
 .title_level_1 {
 	font-size: 5rem;
-}
-
-}
-
-/* Адаптив на ноутбуки */
-@media (max-width: 992px) {
-
-html {
-	font-size: 14px;
 }
 
 .product_item {
@@ -90,8 +94,16 @@ html {
 }
 
 .about_item {
-		flex-basis: calc(50% - 32px);
+	flex-basis: calc(50% - 32px);
 }
 
+}
+
+/* Адаптив на ноутбуки */
+@media (max-width: 992px) {
+
+html {
+	font-size: 14px;
+}
 
 }

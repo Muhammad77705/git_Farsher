@@ -140,7 +140,7 @@ p {
 }
 
 .nav_li {
-	margin: 0 32px;
+	margin: 38px 32px;
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -159,7 +159,7 @@ p {
 
 .nav_li:hover {
 	padding-bottom: 38px;
-  margin-top: 38px;
+  margin: 38px 32px 0;
 }
 
 .nav_li:hover > .submenu {
@@ -231,10 +231,7 @@ p {
 	color: var(--white);
 }
 
-.header_cart_number {
-	position: absolute;
-	top: -2px;
-	left: 102%;
+.header_cart_sup {
 	font-size: .62rem;
 }
 
@@ -242,6 +239,10 @@ p {
 	flex-basis: 10%;
 	margin-left: 50px;
 	text-align: right;
+}
+
+.header_phone_number {
+	color: var(--black);
 }
 
 .header_phone_number::before {
@@ -612,7 +613,7 @@ p {
 
 .banner_price {
 	font-size: 1.87rem;
-	margin: 0 30px 20px 0;
+	margin-right: 30px;
 }
 
 .banner_cart {
@@ -738,7 +739,7 @@ p {
 
 .product_item{
 	flex-basis: calc(33.33% - 32px);
-	height: 600px;
+	height: 590px;
 	margin: 0 16px 95px;
 	border: 1px solid var(--bdgrey);
 	display: -webkit-flex;
@@ -1203,13 +1204,13 @@ p {
 .text_summ {
 	font-weight: 500;
 	font-size: .87rem;
-	margin: 0 24px 0 62px;
+	margin: 0 16px 0 62px;
 }
 
 .cart_price_summ {
 	font-weight: 600;
 	font-size: 1.5rem;
-	max-width: 120px;
+	max-width: 125px;
 	width: 100%;
 	text-align: right;
 	color: var(--black);
@@ -1224,7 +1225,7 @@ p {
 .cart_block_close {
 	width: 12px;
 	height: 12px;
-	margin-left: 64px;
+	margin-left: 60px;
 	cursor: pointer;
 }
 

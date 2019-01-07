@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Фаршер</title>
+	<link rel="shortcut icon" href="#">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="libs/slick/slick-theme.css">
+	<link rel="stylesheet" href="libs/slick/slick.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+
+	<header class="header sas">
+		<div class="header_wrap">
+			<div class="header_logo">
+				<a href="index.html" class="header_logo_link">
+					<img src="img/header_logo.svg" alt="Логотип сайта">
+				</a>
+			</div>
+			<div class="container">
+				<div class="header_items">
+					<ul class="header_nav">
+						<li class="nav_li">
+							<a href="catalog.html" class="header_nav_link header_menu">Каталог продукции</a>
+							<div class="submenu">
+								<div class="container">
+									<div class="submenu_blocks">
+										<div class="submenu_block">
+											<a href="#" class="submenu_nav_title">
+												<span class="submenu_block_img">
+													<img src="img/icon/red_beef.svg" alt="Говядина">
+												</span>
+											 Говядина</a>
+											<ul class="submenu_item">
+												<li><a href="#" class="submenu_nav_link">Мякоть</a></li>
+												<li><a href="#" class="submenu_nav_link">Мякоть на кост</a></li>
+												<li><a href="#" class="submenu_nav_link">Стейки</a></li>
+												<li><a href="#" class="submenu_nav_link">Фарш</a></li>
+											</ul>
+										</div>
+										<div class="submenu_block">
+											<a href="#" class="submenu_nav_title">
+												<span class="submenu_block_img">
+													<img src="img/icon/red_mutton.svg" alt="Баранина"> 
+												</span>
+											Баранина</a>
+											<ul class="submenu_item">
+												<li><a href="#" class="submenu_nav_link">Мякоть</a></li>
+												<li><a href="#" class="submenu_nav_link">Мякоть на кост</a></li>
+												<li><a href="#" class="submenu_nav_link">Стейки</a></li>
+												<li><a href="#" class="submenu_nav_link">Фарш</a></li>
+											</ul>
+										</div>
+										<div class="submenu_block">
+											<a href="#" class="submenu_nav_title">
+												<span class="submenu_block_img">
+													<img src="img/icon/red_chicken.svg" alt="Курятина">
+												</span>
+											 Курятина</a>
+											<ul class="submenu_item">
+												<li><a href="#" class="submenu_nav_link">Мякоть</a></li>
+												<li><a href="#" class="submenu_nav_link">Мякоть на кост</a></li>
+												<li><a href="#" class="submenu_nav_link">Стейки</a></li>
+												<li><a href="#" class="submenu_nav_link">Фарш</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="nav_li"><a href="#" class="header_nav_link">Доставка и оплата</a></li>
+						<li class="nav_li"><a href="index.html#about" class="header_nav_link">О нас</a></li>
+						<li class="nav_li"><a href="contacts.html" class="header_nav_link">Контакты</a></li>
+					</ul>
+					<div class="header_cart">
+						<a href="cart.html" class="header_cart_link">
+							<span class="header_cart_wrap"><img src="img/icon/header_cart.svg" alt="Корзина"></span>
+						Корзина
+						<span class="header_cart_number">3</span>
+						</a>
+						<div id="cart_popup_hidden">
+							<div class="cart_popup">
+								<div class="cart_popup_block">
+									<div class="cart_popup_img">
+										<img src="img/products/1.png" alt="">
+									</div>
+									<div class="cart_popup_name">
+										<div class="cart_popup_title">Стейк Ти-бон</div>
+										<div class="cart_popup_text">В маринаде</div>
+									</div>
+									<div class="cart_popup_info">
+										<div class="cart_popup_price">1 720 ₽</div>
+										<div class="cart_popup_number">&#10006; 3 кг</div>
+									</div>
+									<div class="popup_block_close"><img src="img/icon/cart_close.svg" alt="удалить товар"></div>
+								</div>
+								<div class="cart_popup_block">
+									<div class="cart_popup_img">
+										<img src="img/products/1.png" alt="">
+									</div>
+									<div class="cart_popup_name">
+										<div class="cart_popup_title">Стейк Ти-бон</div>
+										<div class="cart_popup_text">В маринаде</div>
+									</div>
+									<div class="cart_popup_info">
+										<div class="cart_popup_price">1 720 ₽</div>
+										<div class="cart_popup_number">&#10006; 3 кг</div>
+									</div>
+									<div class="popup_block_close"><img src="img/icon/cart_close.svg" alt="удалить товар"></div>
+								</div>
+								<div class="cart_popup_block">
+									<div class="cart_popup_img">
+										<img src="img/products/1.png" alt="">
+									</div>
+									<div class="cart_popup_name">
+										<div class="cart_popup_title">Стейк Ти-бон</div>
+										<div class="cart_popup_text">В маринаде</div>
+									</div>
+									<div class="cart_popup_info">
+										<div class="cart_popup_price">1 720 ₽</div>
+										<div class="cart_popup_number">&#10006; 3 кг</div>
+									</div>
+									<div class="popup_block_close"><img src="img/icon/cart_close.svg" alt="удалить товар"></div>
+								</div>
+								<div class="cart_popup_footer">
+									<div class="cart_popup_summ">
+										Итого 
+										<span class="cart_all_summ">529 ₽</span> 
+									</div>
+									<a href="#" class="popup_get">Оформить заказ</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+			<div class="header_phone">
+				<a class="header_phone_number" href="tel:89272314641">93-67-37</a>
+			</div>
+		</div>
+	</header>
+	<div id="catalog">
+		<div class="catalog_nav">
+			<div class="container catalog_row">
+				<div class="catalog_main_nav">
+					<div class="catalog_kind_flex">
+						<h2 class="catalog_kind_title title_level_2">Говядина</h2>
+						<div class="catalog_kind_menu"><img src="img/icon/black_arrow.svg" alt="Меню"></div>
+					</div>
+					<ul class="catalog_kind_links">
+						<li><a href="#" class="catalog_kind_link">Баранина</a></li>
+						<li><a href="#" class="catalog_kind_link">Курятина</a></li>
+					</ul>
+				</div>
+				<ul class="catalog_nav_links">
+					<li><a href="" class="catalog_nav_link catalog_link_active">Мякоть</a></li>
+					<li><a href="" class="catalog_nav_link">Мякоть на кости</a></li>
+					<li><a href="" class="catalog_nav_link">Стейк</a></li>
+					<li><a href="" class="catalog_nav_link">Фарш</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="catalog_products">
+			<div class="container">
+				<h3 class="meat title_level_3">Мякоть</h3>
+					<div class="product_items products_beef">
+					<div class="product_item">
+						<div class="product_wrap">
+							<div class="product_img">
+								<img src="img/products/1.png" alt="">
+							</div>					
+							<h3 class="product_title">Стейк Ти-бон</h3>
+							<p class="product_text">Ти-бон — стейк, который нарезается из отруба шортлойн, сочетающего сразу два вида мраморного мяса: стриплойн и вырезку.</p>
+						</div>
+						<div class="product_btns">
+							<div class="product_marinades">
+								<div class="no_marinade marinade_active">Без маринада</div>
+								<div class="yes_marinade">В маринаде</div>
+							</div>
+							<div class="product_info">
+								<span class="product_price">529 ₽ / кг</span>
+								<a href="#" class="product_btn">Корзина</a>
+							</div>
+						</div>
+					</div>
+					<div class="product_item">
+						<div class="product_wrap">
+							<div class="product_img">
+								<img src="img/products/2.png" alt="">
+							</div>					
+							<h3 class="product_title">Мякоть бычка</h3>
+							<p class="product_text">Мякоть полуторагодовалого бычка </p>
+						</div>
+						<div class="product_btns">
+							<div class="product_marinades">
+								<div class="no_marinade marinade_active">Без маринада</div>
+								<div class="yes_marinade">В маринаде</div>
+							</div>
+							<div class="product_info">
+								<span class="product_price">529 ₽ / кг</span>
+								<a href="#" class="product_btn">Корзина</a>
+							</div>
+						</div>
+					</div>
+					<div class="product_item">
+						<div class="product_wrap">
+							<div class="product_img">
+								<img src="img/products/2.png" alt="">
+							</div>					
+							<h3 class="product_title">Мякоть бычка</h3>
+							<p class="product_text">Мякоть полуторагодовалого бычка </p>
+						</div>
+						<div class="product_btns">
+							<div class="product_info">
+								<span class="product_price">529 ₽ / кг</span>
+								<a href="#" class="product_btn">Корзина</a>
+							</div>
+						</div>
+					</div>
+					<div class="product_item">
+						<div class="product_wrap">
+							<div class="product_img">
+								<img src="img/products/2.png" alt="">
+							</div>					
+							<h3 class="product_title">Мякоть бычка</h3>
+							<p class="product_text">Мякоть полуторагодовалого бычка </p>
+						</div>
+						<div class="product_btns">
+							<div class="product_info">
+								<span class="product_price">529 ₽ / кг</span>
+								<a href="#" class="product_btn">Корзина</a>
+							</div>
+						</div>
+					</div>
+					<div class="product_item">
+						<div class="product_wrap">
+							<div class="product_img">
+								<img src="img/products/2.png" alt="">
+							</div>					
+							<h3 class="product_title">Мякоть бычка</h3>
+							<p class="product_text">Мякоть полуторагодовалого бычка </p>
+						</div>
+						<div class="product_btns">
+							<div class="product_info">
+								<span class="product_price">529 ₽ / кг</span>
+								<a href="#" class="product_btn">Корзина</a>
+							</div>
+						</div>
+					</div>
+				</div>
+					<h3 class="meat title_level_3">Мякоть на кости</h3>
+				<div class="product_items products_mutton">
+					<div class="product_item">
+						<div class="product_wrap">
+							<div class="product_img">
+								<img src="img/products/1.png" alt="">
+							</div>					
+							<h3 class="product_title">Стейк Ти-бон</h3>
+							<p class="product_text">Ти-бон — стейк, который нарезается из отруба шортлойн, сочетающего сразу два вида мраморного мяса: стриплойн и вырезку.</p>
+						</div>
+						<div class="product_btns">
+							<div class="product_marinades">
+								<div class="no_marinade marinade_active">Без маринада</div>
+								<div class="yes_marinade">В маринаде</div>
+							</div>
+							<div class="product_info">
+								<span class="product_price">529 ₽ / кг</span>
+								<a href="#" class="product_btn">Корзина</a>
+							</div>
+						</div>
+					</div>
+					<div class="product_item">
+						<div class="product_wrap">
+							<div class="product_img">
+								<img src="img/products/1.png" alt="">
+							</div>					
+							<h3 class="product_title">Стейк Ти-бон</h3>
+							<p class="product_text">Ти-бон — стейк, который нарезается из отруба шортлойн, сочетающего сразу два вида мраморного мяса: стриплойн и вырезку.</p>
+						</div>
+						<div class="product_btns">
+							<div class="product_marinades">
+								<div class="no_marinade marinade_active">Без маринада</div>
+								<div class="yes_marinade">В маринаде</div>
+							</div>
+							<div class="product_info">
+								<span class="product_price">529 ₽ / кг</span>
+								<a href="#" class="product_btn">Корзина</a>
+							</div>
+						</div>
+					</div>
+					<div class="product_item">
+						<div class="product_wrap">
+							<div class="product_img">
+								<img src="img/products/1.png" alt="">
+							</div>					
+							<h3 class="product_title">Стейк Ти-бон</h3>
+							<p class="product_text">Ти-бон — стейк, который нарезается из отруба шортлойн, сочетающего сразу два вида мраморного мяса: стриплойн и вырезку.</p>
+						</div>
+						<div class="product_btns">
+							<div class="product_marinades">
+								<div class="no_marinade marinade_active">Без маринада</div>
+								<div class="yes_marinade">В маринаде</div>
+							</div>
+							<div class="product_info">
+								<span class="product_price">529 ₽ / кг</span>
+								<a href="#" class="product_btn">Корзина</a>
+							</div>
+						</div>
+					</div>
+					<div class="product_item">
+						<div class="product_wrap">
+							<div class="product_img">
+								<img src="img/products/2.png" alt="">
+							</div>					
+							<h3 class="product_title">Мякоть бычка</h3>
+							<p class="product_text">Мякоть полуторагодовалого бычка </p>
+						</div>
+						<div class="product_btns">
+							<div class="product_info">
+								<span class="product_price">529 ₽ / кг</span>
+								<a href="#" class="product_btn">Корзина</a>
+							</div>
+						</div>
+					</div>
+					<div class="product_item">
+						<div class="product_wrap">
+							<div class="product_img">
+								<img src="img/products/1.png" alt="">
+							</div>					
+							<h3 class="product_title">Стейк Ти-бон</h3>
+							<p class="product_text">Ти-бон — стейк, который нарезается из отруба шортлойн, сочетающего сразу два вида мраморного мяса: стриплойн и вырезку.</p>
+						</div>
+						<div class="product_btns">
+							<div class="product_info">
+								<span class="product_price">529 ₽ / кг</span>
+								<a href="#" class="product_btn">Корзина</a>
+							</div>
+						</div>
+					</div>
+					<div class="product_item">
+						<div class="product_wrap">
+							<div class="product_img">
+								<img src="img/products/1.png" alt="">
+							</div>					
+							<h3 class="product_title">Стейк Ти-бон</h3>
+							<p class="product_text">Ти-бон — стейк, который нарезается из отруба шортлойн, сочетающего сразу два вида мраморного мяса: стриплойн и вырезку.</p>
+						</div>
+						<div class="product_btns">
+							<div class="product_marinades">
+								<div class="no_marinade marinade_active">Без маринада</div>
+								<div class="yes_marinade">В маринаде</div>
+							</div>
+							<div class="product_info">
+								<span class="product_price">529 ₽ / кг</span>
+								<a href="#" class="product_btn">Корзина</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="container">
+			<div class="header_logo">
+				<a href="#" class="header_logo_link">
+					<img src="img/header_logo.svg" alt="Логотип сайта">
+				</a>
+			</div>
+			<div class="social">
+				<a href="#" class="social_link">Наш инстаграм</a>
+				<a href="#" class="social_callback">Обратный звонок</a>
+			</div>
+		</div>
+	</footer>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="libs/slick/slick.min.js"></script>
+	<script src="libs/jquery.maskedinput.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>

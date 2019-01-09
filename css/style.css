@@ -25,7 +25,8 @@ a {
     color: inherit;
 }
 
-img {
+img,
+svg {
     width: 100%;
 }
 
@@ -54,7 +55,7 @@ address {
 }
 
 .container {
-	max-width: 1140px;
+	max-width: 1150px;
 	width: 100%;
 	margin: 0 auto;
 	padding: 0 15px;
@@ -87,6 +88,7 @@ p {
 .title_level_3 {
 	font-weight: 600;
 	font-size: 2.25rem;
+	line-height: 1.47;
 }
 
 /* Шапка сайта */
@@ -111,7 +113,8 @@ p {
 
 .header_logo {
 	flex-basis: 10%;
-	margin-right: 50px;
+	margin-right: 40px;
+	color: var(--black);
 }
 
 .header_logo_link {
@@ -128,6 +131,7 @@ p {
 	justify-content: space-between;
 	-ms-align-items: center;
 	align-items: center;
+	white-space: nowrap;
 }
 
 .header_menu::before {
@@ -237,7 +241,7 @@ p {
 
 .header_phone {
 	flex-basis: 10%;
-	margin-left: 50px;
+	margin-left: 40px;
 	text-align: right;
 }
 
@@ -248,7 +252,7 @@ p {
 .header_phone_number::before {
 	content: '';
 	display: inline-block;
-	width: 16px;
+	width: 17px;
 	height: 16px;
 	background: url(../img/icon/header_phone.svg) no-repeat center center;
 	margin-right: 12px;
@@ -270,7 +274,7 @@ p {
 	padding: 32px 0;
 	border-top: 1px solid var(--bdgrey);
 	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-	transition: .5s;
+	transition: 1s;
 }
 
 .submenu a {
@@ -286,7 +290,7 @@ p {
 }
 
 .submenu_block{
-	flex-basis: 33%;
+	flex-basis: 33.33%;
 }
 
 .submenu_item {
@@ -297,16 +301,16 @@ p {
 	display: block;
 }
 
-.submenu_block_img {
+.submenu_block_icon {
 	display: inline-block;
 	width: 30px;
 	height: 20px;
 	margin-right: 10px;
+	color: var(--red);
 }
 
-.submenu_block_img img {
-	width: auto;
-	max-width: 100%;
+.submenu_block_icon svg {
+	max-height: 100%;
 }
 
 .submenu_nav_title {
@@ -327,19 +331,17 @@ p {
 
 /* Попап */
 #cart_popup_hidden {
-	display: none;
 	position: absolute;
 	left: 50%;
 	top: 100%;
-	-webkit-transform: translateX(-50%);
-	-ms-transform: translateX(-50%);
-	-o-transform: translateX(-50%);
-	transform: translateX(-50%);
+	-webkit-transform: translate(-50%,-50%) scaleY(0);
+	-ms-transform: translate(-50%,-50%) scaleY(0);
+	-o-transform: translate(-50%,-50%) scaleY(0);
+	transform: translate(-50%,-50%) scaleY(0);
 	z-index: 2;
 	width: 320px;
 	margin: auto;	
 	border-top: 12px solid transparent;
-	transition: all 5s;
 }
 
 .cart_popup {
@@ -354,7 +356,10 @@ p {
 }
 
 .header_cart:hover #cart_popup_hidden {
-	display: block;
+	-webkit-transform: translate(-50%,0) scaleY(1);
+	-ms-transform: translate(-50%,0) scaleY(1);
+	-o-transform: translate(-50%,0) scaleY(1);
+	transform: translate(-50%,0) scaleY(1);
 }
 
 .cart_popup_block {
@@ -584,9 +589,10 @@ p {
 	width: 100%;
 }
 
-.banner_kind {
+.banner_icon {
 	width: 50px;
 	margin-bottom: 4px;
+	color: var(--red);
 }
 
 .banner_title {
@@ -672,6 +678,7 @@ p {
 	border: none;
 	border-left:  1px solid var(--red);
 	border-right: 1px solid var(--red);
+	cursor: default;
 }
 
 #products .kind_border_left {
@@ -917,15 +924,17 @@ p {
 }
 
 .about_item_title {
+	min-height: 37px;
 	font-weight: 600;
 	font-size: .875rem;
+	line-height: 1.35;
 	color: var(--black);
 	margin-bottom: 16px;
 }
 
 .about_item_text {
-	font-size: .75rem;
-	line-height: 1.06;
+	font-size: .75rem;    
+	line-height: 1.5;
 }
 
 .about_img {
@@ -948,17 +957,23 @@ p {
 
 .social_link {
 	display: inline-block;
-	border-bottom: 1px solid #555;
+	border-bottom: 1px solid rgba(85, 85, 85, .4);
 	padding-bottom: 4px;
 	font-weight: 600;
 	font-size: .87rem;
 	color: #000;
-	margin-right: 64px;
+	margin-right: 64px;;
+	transition: .2s;
+}
+
+.social_link:hover {
+	border-bottom: 1px solid rgba(85, 85, 85, 1);
 }
 
 .social_callback {
 	display: inline-block;
-	font-weight: 600;
+	font-weight: 600;	
+	font-size: .87rem;
 	padding: 8px 20px;
 	color: var(--red);
 	border: 1px solid var(--red);
@@ -968,26 +983,32 @@ p {
 
 /* Страница Каталог */
 #catalog {
-	padding-top: 80px;
+	padding-top: 57px;
 	margin-bottom: 25px;
 }
 
 .catalog_nav {
-	/*position: sticky;
-	top: 0;*/
-	margin-bottom: 64px;
+	position: sticky;
+	top: -1px;
+	padding: 23px 0 17px;
+	margin-bottom: 47px;
 	color: var(--black);
+	background-color: #FFF;
 }
 
-.fixed {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	background-color: #FFF;
-	padding: 24px 0 17px;
+.catalog_kind_title {
+	transition: font-size .5s;
+}
+
+.sticky {
 	z-index: 100;
+	padding: 24px 0 17px;
 	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.sticky .catalog_kind_title{
+	font-size: 2.25rem;
+	line-height: 1.47;
 }
 
 .catalog_row {
@@ -1013,18 +1034,18 @@ p {
 	display: flex;
 	-ms-align-items: center;
 	align-items: center;
-	margin-bottom: 24px;
 	cursor: pointer;
 } 
 
 .catalog_kind_menu {
 	width: 16px;	
 	height: 16px;	
-	margin-left: 24px;
+	margin-left: 24px;    
+	transition: transform 0.2s linear;
 }
 
 .catalog_kind_active {
-	transform: rotate(180deg);
+	transform: rotate(-180deg);
 }
 
 .catalog_kind_links {
@@ -1035,13 +1056,14 @@ p {
 	width: 100%;
 	background-color: var(--white);
 	z-index: 20;
+	margin-top: 24px;
 	border: 1px solid var(--bdgrey);
+	border-radius: 4px;
 	box-shadow: 0 24px 40px rgba(0, 0, 0, 0.1);
 }
 
 .catalog_kind_links li {
 	display: block;
-	padding: 24px;
 }
 
 .catalog_kind_links li:nth-child(even) {
@@ -1049,6 +1071,8 @@ p {
 }
 
 .catalog_kind_link {
+	display: block;
+	padding: 24px;
 	color: var(--black);
 	font-weight: 600;
 	font-size: 1.5rem;
@@ -1060,6 +1084,7 @@ p {
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
+	white-space: nowrap;
 }
 
 .catalog_nav_link {
@@ -1071,9 +1096,11 @@ p {
 	border-radius: 24px;
 }
 
-.catalog_link_active {
+.catalog_nav_link:hover,
+a.mPS2id-highlight {
 	border: 1px solid var(--red);
 }
+
 
 .meat {
 	color: var(--black);
@@ -1087,8 +1114,8 @@ p {
 	border-bottom: 1px solid var(--bdgrey);
 }
 
-.cart_block {
-	margin-top: 33px;
+#cart h2 {
+	margin-bottom: 32px;
 }
 
 .cart_block {
@@ -1101,7 +1128,7 @@ p {
 	-ms-align-items: center;
 	align-items: center;
 	border-bottom: 1px solid var(--bdgrey);
-	padding: 33px 0;
+	padding: 32px 0;
 }
 
 .cart_img {
@@ -1384,16 +1411,18 @@ p {
 	flex-basis: 60%;
 }
 
-.chart_work {
-	flex-basis: 40%;
+.work {
 	padding-left: 64px;
+	flex-basis: 40%;
+	line-height: 1.45;
+}
+
+.chart_work {
 	font-weight: 600;
-	line-height: 1.43;
 }
 
 .work_time {
 	display: block;
-	font-weight: 400;
 	font-size: .87rem;
 	margin-top: 2px;
 }

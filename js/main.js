@@ -6,13 +6,25 @@ $(function(){
     appendDots:'.nav_banner'
   });
 
+  $('.menu_mobile').on('click', function (e) {
+    e.preventDefault();
+    $(this).toggleClass('menu_mobile_active');
+    $('.header_items').slideToggle();
+  });
+
+  $('.submenu_toggle').on('click', function (e) {
+    e.preventDefault();
+    $(this).toggleClass('submenu_toggle_active');
+    $(this).parent().siblings().slideToggle();
+  });
+
 	$('.product_kind_blocks div').click(function (){
   		var myId = ".products_"+$(this).attr("id");
   		$('.product_kind_blocks div').removeClass("kind_block_active");
   		$(this).addClass("kind_block_active");
-      $('.product_kind_blocks div').removeClass('kind_border_left kind_border_right');
-      $(this).prev().addClass('kind_border_left');
-      $(this).next().addClass('kind_border_right');
+      // $('.product_kind_blocks div').removeClass('kind_border_left kind_border_right');
+      // $(this).prev().addClass('kind_border_left');
+      // $(this).next().addClass('kind_border_right');
   		$(".hide_products").hide();
   		$(myId).css('display','flex');
       $('.nav_banner').removeAttr('style');
@@ -41,7 +53,7 @@ $(function(){
 
 	$('.catalog_kind_flex').click(function (){
     $('.catalog_kind_menu').toggleClass('catalog_kind_active');
-		$('.catalog_kind_links').slideToggle();
+    $('.catalog_kind_links').toggleClass('catalog_links_active');
 	});
 
   $('#phone').mask("+7(999) 999-99-99");

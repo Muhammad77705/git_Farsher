@@ -31,8 +31,8 @@ $(function(){
  	});
 
 	$('.product_marinades div').click(function (){
-  		$(this).siblings().removeClass("marinade_active");
-  		$(this).addClass("marinade_active");
+  		$(this).siblings().removeClass("marinade_checked");
+  		$(this).addClass("marinade_checked");
  	});
 
   $(window).scroll(function(){

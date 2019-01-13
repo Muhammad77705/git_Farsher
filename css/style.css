@@ -94,6 +94,7 @@ p {
 .header {
 	position: relative;
 	font-weight: 600;
+	border-bottom: 1px solid var(--bdgrey);
 }
 
 .header_wrap {
@@ -118,10 +119,12 @@ p {
 .header_logo_link {
 	display: inline-block;
 	width: 137px;
+	height: 30px;
 }
 
 .header_logo_link svg{
 	width: 100%;
+	max-height: 100%;
 }
 
 .header_items {
@@ -164,6 +167,10 @@ p {
 .nav_li:hover {
 	padding-bottom: 38px;
   margin: 38px 32px 0;
+}
+
+.call_us_phone {
+	display: none;
 }
 
 .submenu:hover {
@@ -228,14 +235,14 @@ p {
 	color: var(--white);
 }
 
-.header_cart:hover .header_cart_wrap {
+/* .header_cart:hover .header_cart_wrap {
 	width: 50px;
 	height: 50px;
 }
 
 .header_cart:hover {
 	padding: 23px 25px 29px;
-}
+} */
 
 .header_cart_wrap svg {
 	margin: auto;
@@ -615,12 +622,17 @@ p {
 	color: var(--red);
 }
 
+.banner_icon svg {
+	max-width: 100%;
+	max-height: 100%;
+}
+
 .banner_title {
 	margin-bottom: 16px;
 }
 
-.banner_text {
-	font-size: 1.25rem;
+.banner_descr {
+	font-size: 20px;
 	line-height: 1.4;
 }
 
@@ -638,7 +650,8 @@ p {
 }
 
 .banner_price {
-	font-size: 1.87rem;
+	font-weight: 600;
+	font-size: 30px;
 	margin-right: 30px;
 }
 
@@ -646,6 +659,8 @@ p {
 	display: inline-block;
 	background-color: var(--red);
 	padding: 15px 52px;
+	font-weight: 700;
+	font-size: 14px;
 	border-radius: 4px;
 }
 
@@ -725,16 +740,17 @@ p {
 	left: 2%;
 	width: 96%;
 	height: 99%;
-	background: #fff;
+	background: var(--white);
 	border-radius: 4px;
 }
 
-.kind_block_img {
+.kind_block_icon {
 	width: 50px;
 }
 
-.kind_block_img img {
+.kind_block_icon svg {
 	max-width: 100%;
+	max-height: 100%;
 }
 
 .kind_block_title {
@@ -803,7 +819,7 @@ p {
 	margin-bottom: 12px;
 }
 
-.product_text {
+.product_descr {
 	font-size: 14px;
 	margin-bottom: 24px;
 	line-height: 1.42;
@@ -820,6 +836,7 @@ p {
 
 .product_marinades {
 	display: flex;
+	font-weight: 500;
 	font-size: 12px;
 	margin: auto 0 24px;
 	padding: 0 32px;
@@ -853,7 +870,7 @@ p {
 	border-left: 1px solid transparent;
 }
 
-.product_marinades .marinade_active {
+.product_marinades .marinade_checked {
 	color: var(--red);
 	border: 1px solid var(--red);
 }
@@ -864,6 +881,7 @@ p {
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
+	justify-content: space-between;
 	-ms-align-items: center;
 	align-items: center;
 	border-top: 1px solid var(--bdgrey);
@@ -884,7 +902,7 @@ p {
 	font-weight: 700;
 	font-size: 14px;
 	text-align: center;
-	padding: 15px 36px;
+	padding: 15px;
 	color: var(--white);
 	background-color: var(--red);
 	border-radius: 4px;
@@ -904,6 +922,7 @@ p {
 	border: 1px solid var(--red);
 	color: var(--red);
 	border-radius: 4px;
+	text-align: center;
 	padding: 15px 40px;
 	background-color: var(--white);
 	font-weight: 700;
@@ -1010,8 +1029,13 @@ p {
 	text-align: center;
 	border: 1px solid var(--red);
 	border-radius: 4px;
+	transition: .5s;
 }
 
+.social_callback:hover {
+	color: var(--white);
+	background-color: var(--red);
+}
 
 /* Страница Каталог */
 #catalog {
@@ -1025,10 +1049,13 @@ p {
 	padding: 23px 0 17px;
 	margin-bottom: 47px;
 	color: var(--black);
-	background-color: #FFF;
+	background-color: var(--white);
 }
 
 .catalog_kind_title {
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 53px;
 	transition: font-size .5s;
 }
 
@@ -1039,8 +1066,7 @@ p {
 }
 
 .sticky .catalog_kind_title{
-	font-size: 2.25rem;
-	line-height: 1.47;
+	font-size: 36px;
 }
 
 .catalog_row {
@@ -1114,7 +1140,7 @@ p {
 	padding: 24px;
 	color: var(--black);
 	font-weight: 600;
-	font-size: 1.5rem;
+	font-size: 24px;
 }
 
 .catalog_nav_links {
@@ -1126,11 +1152,14 @@ p {
 	white-space: nowrap;
 }
 
+.catalog_nav_li {
+	margin-left: 44px;
+}
+
 .catalog_nav_link {
 	display: inline-block;
 	font-weight: 600;
 	padding: 10px 20px;
-	margin-left: 44px;
 	border: 1px solid transparent;
 	border-radius: 24px;
 }
@@ -1144,7 +1173,7 @@ a.mPS2id-highlight {
 
 .meat {
 	color: var(--black);
-	margin-bottom: 96px;
+	margin-bottom: 94px;
 }
 
 
@@ -1215,7 +1244,7 @@ a.mPS2id-highlight {
 .cart_title,
 .cart_price  {
 	color: var(--black);
-	font-size: 1.25rem;
+	font-size: 20px;
 	margin-bottom: 2px;
 }
 
@@ -1231,9 +1260,13 @@ a.mPS2id-highlight {
 .cart_kg {
 	max-width: 92px;
 	width: 100%;
-	font-size: .87rem;
+	font-size: 14px;
 	font-weight: 500;
 	margin-right: 32px;
+}
+ 
+.kg_hidden {
+	display: none;
 }
 
 .cart_product_count {
@@ -1271,13 +1304,13 @@ a.mPS2id-highlight {
 
 .text_summ {
 	font-weight: 500;
-	font-size: .87rem;
+	font-size: 14px;
 	margin: 0 16px 0 62px;
 }
 
 .cart_price_summ {
 	font-weight: 600;
-	font-size: 1.5rem;
+	font-size: 24px;
 	max-width: 125px;
 	width: 100%;
 	text-align: right;
@@ -1341,14 +1374,14 @@ a.mPS2id-highlight {
 
 .total {
 	font-weight: 600;
-	font-size: 2rem;
+	font-size: 32px;
 	color: var(--black);
 }
 
 .total_text {
 	display: inline-block;
 	color: var(--kgrey);
-	font-size: 1.5rem;
+	font-size: 24px;
 	margin-right: 16px;
 }
 
@@ -1385,7 +1418,7 @@ a.mPS2id-highlight {
 .form_block label {
 	display: inline-block;
 	font-weight: 500;
-	font-size: .87rem;
+	font-size: 14px;
 	color: var(--black);
 	margin-bottom: 15px;
 }
@@ -1394,7 +1427,7 @@ a.mPS2id-highlight {
 	display: block;
 	width: 100%;
 	font-weight: 500;
-	font-size: .87rem;
+	font-size: 14px;
 	padding: 15px 16px;
 	color: var(--grey);
 	border: 1px solid var(--bdgrey);
@@ -1436,7 +1469,7 @@ a.mPS2id-highlight {
 
 .form_courier {
 	font-weight: 500;
-	font-size: 1.12rem;
+	font-size: 18px;
 	color: var(--black);
 	margin-right: 15px;
 }
@@ -1444,7 +1477,7 @@ a.mPS2id-highlight {
 .form_btn {
 	border: none;
 	font-weight: 700;
-	font-size: .87rem;
+	font-size: 14px;
 	background-color: var(--red);
 	color: var(--white);
 	padding: 15px 32px;
@@ -1453,7 +1486,7 @@ a.mPS2id-highlight {
 
 /* Страницы Контакты */
 .contacts {
-	padding: 80px 0 136px;
+	padding: 80px 0 138px;
 	color: var(--black);
 }
 
@@ -1503,6 +1536,7 @@ a.mPS2id-highlight {
 
 .map iframe {
 	border: none;
+	height: 508px;
 }
 
 .address {
@@ -1519,6 +1553,11 @@ a.mPS2id-highlight {
 .address_block {
 	font-size: 14px;
 	margin: 24px 0;
+	line-height: 18px;
+}
+
+.address_block:last-child {
+	margin-bottom: 0;
 }
 
 .address_city {
@@ -1526,7 +1565,6 @@ a.mPS2id-highlight {
 	margin-top: 32px;
 }
 
-.address_street,
-.phone_number {
+.address_street{
 	margin-bottom: 8px;
 }

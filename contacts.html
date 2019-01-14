@@ -279,10 +279,7 @@
 				</div>
 			</div>
 			<div class="map_block">
-				<div class="map">
-					<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ad291e7c39710ab5dfe00b18c1dc340b09d44c8e05d90ad14aee37411ffa77f76&amp;scroll=false&amp;source=constructor"
-					 width="100%" height="auto" frameborder="0"></iframe>
-				</div>
+				<div id="map"></div>
 				<address class="address">
 					<h3 class="address_shopes">Адреса магазинов</h3>
 					<div class="address_city city_first">Махачкала</div>
@@ -366,6 +363,60 @@
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script src="libs/slick/slick.min.js"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=<dcaeaafa-1aa1-4a1d-8462-d75780c1eb42>&lang=ru_RU" type="text/javascript"></script>
+	<script>
+		// Функция ymaps.ready() будет вызвана, когда
+		// 	загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+			ymaps.ready(init);
+			function init() {
+				// Создание карты.    
+				var myMap = new ymaps.Map("map", {
+					// Координаты центра карты.
+					// Порядок по умолчанию: «широта, долгота».
+					// Чтобы не определять координаты центра карты вручную,
+					// воспользуйтесь инструментом Определение координат.
+					center: [42.990897394299935, 47.49955081907552],
+					// Уровень масштабирования. Допустимые значения:
+					// от 0 (весь мир) до 19.
+					zoom: 13,
+					controls: []
+				});
+				
+		
+
+					var coords = [
+						[42.984722, 47.470429],
+						[42.970228, 47.478880],
+						[42.976728, 47.512937],
+						[42.964306, 47.546103]
+					];
+
+					var myGeoObjects = [];
+
+					for (var i = 0; i < coords.length; i++) {
+							myGeoObjects[i] = new ymaps.Placemark(coords[i], {},
+							{
+								iconLayout: 'default#image',
+								iconImageHref: 'img/icon/map_marker.png',
+								iconImageSize: [32, 32],
+								iconImageOffset: [0, -32]
+							});
+
+					}
+
+					var myClusterer = new ymaps.Clusterer(
+						
+					);
+					myClusterer.add(myGeoObjects);
+					myMap.geoObjects.add(myClusterer);
+					myMap.behaviors.disable('scrollZoom');
+					myMap.controls.add("zoomControl", {
+					position: { top: 25, left: 6 }
+				});
+			}
+			
+
+	</script>
 	<script src="libs/jquery.maskedinput.min.js"></script>
 	<script src="js/main.js"></script>
 

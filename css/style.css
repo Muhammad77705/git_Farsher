@@ -795,7 +795,7 @@ p {
 	display: none;
 }
 
-.product_item{
+.product_item {
 	flex-basis: calc(33.33% - 32px);
 	height: 585px;
 	margin: 0 16px 95px;
@@ -825,6 +825,10 @@ p {
 
 .product_img img {
 	border-radius: 4px;
+}
+
+.product_item:hover .product_img img {
+	box-shadow: 0px 16px 40px rgba(0, 0, 0, .16); 
 }
 
 .product_title {
@@ -1210,17 +1214,15 @@ p {
 }
 
 .catalog_nav_link:hover,
-a.mPS2id-highlight {
+.catalog_nav_links a.mPS2id-highlight {
 	border: 1px solid var(--red);
 	transition: 1s;
 }
-
 
 .meat {
 	color: var(--black);
 	margin-bottom: 94px;
 }
-
 
 /* Страница корзины */
 #cart {

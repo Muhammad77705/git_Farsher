@@ -251,10 +251,6 @@ footer .header_logo {
 
 /* Адаптив на ноутбуки */
 @media (max-width: 992px) {
-
-.product_title {
-	font-size: 20px;
-}
 	
 .header {
 	font-size: 18px;
@@ -458,7 +454,6 @@ footer .header_logo {
 	margin-bottom: 13px;
 }
 
-
 .submenu_blocks {
 	width: 100%;
 	padding: 0 20px;
@@ -587,6 +582,10 @@ footer .header_logo {
 	top: -24px;
 }
 
+.product_title {
+	font-size: 20px;
+}
+
 .product_descr {
 	line-height: 1.3;
 }
@@ -646,6 +645,10 @@ footer .header_logo {
 	margin-top: 0;
 	border: none;
 	box-shadow: none;
+}
+
+.catalog_nav_link:hover {
+	border: 1px solid transparent;
 }
 
 .catalog_kind_links li:nth-child(even) {
@@ -1085,6 +1088,10 @@ footer .header_logo {
 	padding-top: 100px;
 }
 
+.product_title {
+	font-size: 18px;
+}
+
 .kind_block {
 	height: 95px;
 }
@@ -1095,6 +1102,10 @@ footer .header_logo {
 /* Страница Каталог */
 #catalog {
 	padding-top: 0;
+}
+
+.product_descr {
+	font-size: 13px;
 }
 
 .catalog_main_nav .catalog_kind_title,
@@ -1136,10 +1147,6 @@ footer .header_logo {
 	width: 100%;
 }
 
-.product_title {
-	font-size: 18px;
-}
-
 }
 
 @media (max-width: 575px) {
@@ -1170,6 +1177,11 @@ footer .header_logo {
 	width: 100%;
 	transform: translate(-50%, 0);
 	margin-bottom: 24px;
+}
+
+.kind_block:nth-child(2),
+.kind_block:last-child  {
+	border-radius: 0;
 }
 
 .kind_block {
@@ -1204,17 +1216,9 @@ footer .header_logo {
 	line-height: 15px;
 }
 
-.product_descr {
-	font-size: 13px;
-}
-
 }
 
 @media (max-width: 480px) {
-
-.product_title {
-	font-size: 17px;
-}
 
 .container {
 	width: 100%;
@@ -1303,6 +1307,10 @@ footer .header_logo {
 	margin-bottom: 65px;
 }
 
+.product_title {
+	font-size: 17px;
+}
+
 /*  СТраница каталог */
 .catalog_nav_li {
 	margin-left: 2px;	
@@ -1353,19 +1361,7 @@ footer .header_logo {
 	display: block;
 	width: 100%;
 }
-
-.product_descr {
-	font-size: 12px;
-}
-
-body .sas {
-	border-bottom: none;
-}
-
-.product_title {
-	font-size: 16px;
-}
-
+/* Главная страница */
 .banner_carousel_item  {
 	height: 260px;
 }
@@ -1403,6 +1399,20 @@ body .sas {
 .product_item:first-child {
 	border-top: none;
 }
+
+.product_title {
+	font-size: 16px;
+}
+
+.product_descr {
+	font-size: 12px;
+}
+
+/* Страница Каталог */
+.catalog_products section:last-child .product_item {
+	border-bottom: none;
+}
+
 
 
 }

@@ -1,6 +1,6 @@
 $(function(){
 
-    $('.banner_carousel_items').slick({
+  $('.banner_carousel_items').slick({
     dots: true,
     appendArrows:'.nav_banner',
     appendDots:'.nav_banner'
@@ -18,20 +18,17 @@ $(function(){
   });
 
 	$('.product_kind_blocks div').click(function (){
-  		var myId = ".products_"+$(this).attr("id");
-  		$('.product_kind_blocks div').removeClass("kind_block_active");
-  		$(this).addClass("kind_block_active");
-      // $('.product_kind_blocks div').removeClass('kind_border_left kind_border_right');
-      // $(this).prev().addClass('kind_border_left');
-      // $(this).next().addClass('kind_border_right');
-  		$(".hide_products").hide();
-  		$(myId).css('display','flex');
-      $('.nav_banner').removeAttr('style');
+  	var myId = ".products_"+$(this).attr("id");
+  	$('.product_kind_blocks div').removeClass("kind_block_active");
+  	$(this).addClass("kind_block_active");
+  	$(".hide_products").hide();
+  	$(myId).css('display','flex');
+    $('.nav_banner').removeAttr('style');
  	});
 
 	$('.product_marinades div').click(function (){
-  		$(this).siblings().removeClass("marinade_checked");
-  		$(this).addClass("marinade_checked");
+  	$(this).siblings().removeClass("marinade_checked");
+  	$(this).addClass("marinade_checked");
  	});
 
   $(window).scroll(function(){
@@ -42,13 +39,6 @@ $(function(){
       $('.catalog_nav').removeClass('sticky');
     }
   });
-
- 	// $('.catalog_nav_link').click(function (e){
- 	// 	e.preventDefault();
-  //   $('.catalog_nav_link').removeClass('catalog_link_active');
-  //   $(this).addClass('catalog_link_active');
-  //  });
-   
 
 	$('.catalog_kind_flex').click(function (){
     $('.catalog_kind_menu').toggleClass('catalog_kind_active');

@@ -169,7 +169,8 @@ p {
   margin: 38px 32px 0;
 }
 
-.call_us_phone {
+.call_us_phone,
+.cart_mobile {
 	display: none;
 }
 
@@ -282,12 +283,12 @@ p {
 	width: 100%;
 	padding: 32px 0;
 	background-color: var(--white);
+	visibility: hidden;
 	opacity: 0;
 	border-top: 1px solid var(--bdgrey);
 	border-bottom: 1px solid var(--bdgrey);
 	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 	transition: opacity .5s, visibility .2s;
-	display: none;
 }
 
 .nav_li:hover > .submenu {
@@ -359,10 +360,10 @@ p {
 	transform: translateX(-50%);
 	z-index: 2;
 	width: 320px;
+	visibility: hidden;
 	opacity: 0;
 	transition: opacity .5s, visibility .2s;
 	border-top: 12px solid transparent;
-	display: none;
 }
 
 .cart_popup {
@@ -667,6 +668,15 @@ p {
 	font-weight: 700;
 	font-size: 14px;
 	border-radius: 4px;
+	outline: none;
+}
+
+.banner_cart:hover {
+	transform: translateY(-7px);
+}
+
+.banner_cart:active {
+	transform: translateY(0);
 }
 
 /* Карточки */
@@ -720,7 +730,7 @@ p {
 	/* border-left:  1px solid var(--red);
 	border-right: 1px solid var(--red); */
 	cursor: default;
-	transition: 1s;
+	transition: color .8s, background .8s;
 }
 /* 
 #products .kind_border_left {
@@ -912,6 +922,15 @@ p {
 	background-color: var(--red);
 	border-radius: 4px;
 	cursor: pointer;
+	transition: .3s;
+}
+
+.product_btn:hover {
+	transform: translateY(-7px);
+}
+
+.product_btn:active {
+	transform: translateY(0);
 }
 
 .proceed_btn {

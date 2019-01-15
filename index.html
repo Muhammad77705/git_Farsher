@@ -59,7 +59,7 @@
 					</svg>
 				</a>
 			</div>
-			<a href="#" class="menu_mobile"><span></span></a>
+			<a href="" class="menu_mobile"><span></span></a>
 			<div class="container header_items">
 				<ul class="header_nav">
 					<li class="nav_li">
@@ -166,7 +166,7 @@
 						</div>
 					</li>
 					<li class="nav_li"><a href="#" class="header_nav_link">Доставка и оплата</a></li>
-					<li class="nav_li"><a href="index.html#about" class="header_nav_link">О нас</a></li>
+					<li class="nav_li"><a href="#about" class="header_nav_link">О нас</a></li>
 					<li class="nav_li header_call_us">
 						<a href="contacts.html" class="header_nav_link">Контакты</a>
 						<a href="tel:89272314641" class="call_us_phone">Позвонить нам</a>
@@ -268,6 +268,16 @@
 			</div>
 		</div>
 	</header>
+	<a href="cart.html" class="cart_mobile">
+		<svg width="29" height="25" viewBox="0 0 19 16" xmlns="http://www.w3.org/2000/svg">
+			<path d="M5.86467 10.6668L5.86759 10.6667H15.3422C15.5802 10.6667 15.7896 10.5088 15.855 10.2799L17.9884 2.81319C18.0344 2.65222 18.0022 2.47917 17.9015 2.34556C17.8007 2.21194 17.643 2.13333 17.4756 2.13333H4.63459L4.25332 0.417639C4.19901 0.173611 3.98261 0 3.73259 0H0.53239C0.237789 0 -0.000976562 0.23875 -0.000976562 0.533333C-0.000976562 0.827917 0.237789 1.06667 0.53239 1.06667H3.30479C3.37229 1.37069 5.12935 9.27708 5.23046 9.73195C4.66362 9.97833 4.26596 10.5435 4.26596 11.2C4.26596 12.0822 4.98378 12.8 5.86606 12.8H15.5378C15.8324 12.8 16.0712 12.5613 16.0712 12.2667C16.0712 11.9721 15.8324 11.7333 15.5378 11.7333H5.86606C5.57201 11.7333 5.33269 11.494 5.33269 11.2C5.33269 10.9064 5.57118 10.6675 5.86467 10.6668ZM16.7685 3.2L14.9398 9.6H6.29387L4.87155 3.2H16.7685Z"
+			 fill="currentColor" />
+			<path d="M5.33252 14.4C5.33252 15.2823 6.05034 16 6.93262 16C7.8149 16 8.53272 15.2823 8.53272 14.4C8.53272 13.5178 7.8149 12.8 6.93262 12.8C6.05034 12.8 5.33252 13.5178 5.33252 14.4ZM6.93262 13.8667C7.22667 13.8667 7.46599 14.106 7.46599 14.4C7.46599 14.6941 7.22667 14.9334 6.93262 14.9334C6.63857 14.9334 6.39925 14.6941 6.39925 14.4C6.39925 14.106 6.63857 13.8667 6.93262 13.8667Z"
+			 fill="currentColor" />
+			<path d="M12.8711 14.4C12.8711 15.2823 13.5889 16 14.4712 16C15.3535 16 16.0713 15.2823 16.0713 14.4C16.0713 13.5178 15.3535 12.8 14.4712 12.8C13.5889 12.8 12.8711 13.5178 12.8711 14.4ZM14.4712 13.8667C14.7652 13.8667 15.0046 14.106 15.0046 14.4C15.0046 14.6941 14.7652 14.9334 14.4712 14.9334C14.1771 14.9334 13.9378 14.6941 13.9378 14.4C13.9378 14.106 14.1771 13.8667 14.4712 13.8667Z"
+			 fill="currentColor" />
+		</svg>
+	</a>
 	<div id="banner">
 		<div class="banner_carousel_items">
 			<div class="banner_carousel_item">
@@ -823,6 +833,15 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script src="libs/slick/slick.min.js"></script>
 	<script src="libs/jquery.maskedinput.min.js"></script>
+	<script>
+		$(function () {
+			$("a[href^='#about']").click(function () {
+				var _href = $(this).attr("href");
+				$("html, body").animate({ scrollTop: $(_href).offset().top + "px" });
+				return false;
+			});
+		});
+	</script>
 	<script src="js/main.js"></script>
 
 </body>

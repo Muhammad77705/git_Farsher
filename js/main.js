@@ -6,14 +6,13 @@ $(function(){
     appendDots:'.nav_banner'
   });
 
-  $('.menu_mobile').on('click', function (e) {
+  $('.menu_mobile').click(function (e) {
     e.preventDefault();
     $(this).toggleClass('menu_mobile_active');
     $('.header_items').slideToggle();
   });
 
-  $('.submenu_toggle').on('click', function (e) {
-    e.preventDefault();
+  $('.submenu_toggle').click(function () {
     $(this).toggleClass('submenu_toggle_active');
     $(this).parent().siblings().slideToggle();
   });
@@ -58,5 +57,4 @@ $(function(){
 
   $('#phone').mask("+7(999) 999-99-99");
 
-  $(".catalog_nav_link").mPageScroll2id();
 });

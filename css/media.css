@@ -488,7 +488,7 @@ footer .header_logo {
 	padding: 0;
 	border: 0;
 	margin: 50px 20px 0;
-	max-width: 330px;
+	max-width: 375px;
 }
 
 .header_cart:hover {
@@ -691,6 +691,14 @@ footer .header_logo {
 	padding: 24px 0;
 }
 
+.total_block {
+	font-size: 28px;
+}
+
+.total_text {
+	font-size: 22px;
+}
+
 .cart_block:first-child {
 	padding-top: 0;
 }
@@ -799,6 +807,7 @@ footer .header_logo {
 }
 
 @media (max-width: 767px) {
+
 
 .title_level_2 {
 	font-weight: 600;
@@ -1014,7 +1023,18 @@ footer .header_logo {
 }
 
 .total_block {
+	justify-content: space-between;
+	font-size: 26px;
 	padding-bottom: 10px;
+}
+
+#total_summ {
+	line-height: 36px;
+}
+
+.total_text {
+	font-size: 20px;
+	line-height: 27px;
 }
 
 .registration_title {
@@ -1028,7 +1048,7 @@ footer .header_logo {
 
 /* Страница Контакты */
 #map {
-	width: 370px;
+	width: 375px;
 	height: 300px;
 	margin: auto;
 }
@@ -1170,8 +1190,12 @@ footer .header_logo {
 
 @media (max-width: 575px) {
 
+#products .container {
+	padding: 0;
+}
 
-.submenu_blocks {
+.submenu_blocks,
+#registration .container{
 	padding: 0 20px;
 }
 
@@ -1241,13 +1265,15 @@ footer .header_logo {
 
 .container {
 	width: 100%;
+	padding-left: 0;
+	padding-right: 0;
 }
 
-.catalog_products .container {
-	padding: 0;
-}
 
-.catalog_row {
+.catalog_row,
+.submenu_blocks,
+.footer_row,
+#banner .container {
 	padding: 0 20px;
 }
 
@@ -1354,24 +1380,22 @@ footer .header_logo {
 	padding: 0;
 }
 
-#cart h2 {
-	padding: 0 20px;
-}
-
-.cart_block,
-.total_block {
+.cart_block {
 	padding: 24px 20px;
 }
 
+.total_block {
+	font-size: 24px;
+	padding: 24px 20px 10px;
+}
+
+.total_text {
+	font-size: 18px;
+}
+
 /* Контакты */
-.contacts .container {
-	padding: 0;
-}
-
-.contacts_header {
-	padding: 0 20px;
-}
-
+#cart h2,
+.contacts_header,
 .address {
 	padding: 0 20px;
 }
@@ -1432,8 +1456,56 @@ footer .header_logo {
 }
 
 /* Страница Каталог */
+.catalog_nav_li {
+	margin-left: 0;
+}
+
+.catalog_nav_link {
+  padding: 8px 14px;
+}
+
 .catalog_products section:last-child .product_item {
 	border-bottom: none;
+}
+
+}
+
+@media (max-width: 375px) {
+
+/* Страница Каталог */
+.catalog_kind_link {
+	font-size: 16px;
+	margin-left: 14px;
+}
+
+.catalog_nav_link {
+	margin-left: 0;
+	padding: 6px 8px;
+}
+
+/* Страница Корзина */
+.cart_img {
+	margin-right: 10px;
+}
+
+.cart_add, .cart_remove {
+	width: 28px;
+	height: 28px;
+}
+
+.cart_price_summ,
+.cart_title,
+.cart_product_count {
+	font-size: 14px;
+}
+
+.cart_product_count {
+	width: 45px;
+	margin: 0;
+}
+
+.cart_price_summ {
+	width: 89px;
 }
 
 

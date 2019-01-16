@@ -427,7 +427,7 @@ footer .header_logo {
 
 .cart_mobile {
 	position: fixed;
-	top: 80%;
+	bottom: 20px;
 	right: 20px;
 	z-index: 110;
 	display: flex;
@@ -660,6 +660,10 @@ footer .header_logo {
 	font-size: 20px;
 	margin-left: 28px;
 	opacity: 0.24;
+}
+
+.catalog_kind_link:hover {
+	color: inherit;
 }
 
 .catalog_nav_li {
@@ -947,6 +951,11 @@ footer .header_logo {
 	color: var(--black);
 }
 
+.proceed_btn_link {
+	flex-basis: 375px;
+	margin: 0 20px;
+}
+
 #about .container{
 	width: 100%;
 	padding: 0;
@@ -1061,7 +1070,6 @@ footer .header_logo {
 	flex-direction: column;
 	align-items: center;
 }
-
 
 /* Главная страница */
 .banner_content {
@@ -1258,6 +1266,10 @@ footer .header_logo {
 .social_callback {
 	order: -1;
 	flex-basis: 375px;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 18px;
+	padding: 15px 20px;
 	margin-bottom: 24px;
 }
 

@@ -24,7 +24,16 @@ $(function(){
   	$(".hide_products").hide();
   	$(myId).css('display','flex');
     $('.nav_banner').removeAttr('style');
- 	});
+   });
+   
+  $(window).scroll(function () {
+    if ($('.catalog_nav_link').hasClass('mPS2id-highlight')) {
+         $('.catalog_nav_link').removeClass('catalog_nav_active')
+    }
+    else {
+      $('.catalog_nav_link:first').addClass('catalog_nav_active')
+    }
+  });
 
 	$('.product_marinades div').click(function (){
   	$(this).siblings().removeClass("marinade_checked");

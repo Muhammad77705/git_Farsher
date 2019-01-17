@@ -317,7 +317,7 @@ footer .header_logo {
 .menu_mobile span::after {
   content: '';
   display: block;
-  transition: 0.2s;
+  transition: 0.1s;
 }
 
 .menu_mobile span::before {
@@ -1163,7 +1163,7 @@ footer .header_logo {
 }
 
 .cart_price_summ {
-	width: 100px;
+	width: 102px;
 }
 
 .total_block {
@@ -1505,7 +1505,7 @@ footer .header_logo {
 }
 
 .cart_price_summ {
-	width: 89px;
+	width: 84px;
 }
 
 

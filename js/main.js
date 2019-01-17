@@ -25,34 +25,77 @@ $(function(){
   	$(myId).css('display','flex');
     $('.nav_banner').removeAttr('style');
    });
-   
-  $(window).scroll(function () {
-    if ($('.catalog_nav_link').hasClass('mPS2id-highlight')) {
-         $('.catalog_nav_link').removeClass('catalog_nav_active')
-    }
-    else {
-      $('.catalog_nav_link:first').addClass('catalog_nav_active')
-    }
-  });
 
 	$('.product_marinades div').click(function (){
   	$(this).siblings().removeClass("marinade_checked");
   	$(this).addClass("marinade_checked");
  	});
 
-  $(window).scroll(function(){
-    if($(this).scrollTop()>169){
-      $('.catalog_nav').addClass('sticky');
+  $(window).scroll(function () {
+    if ($('.catalog_nav_link').hasClass('mPS2id-highlight')) {
+      $('.catalog_nav_link').removeClass('catalog_nav_active')
     }
-    else if ($(this).scrollTop()<169){
-      $('.catalog_nav').removeClass('sticky');
+    else {
+      $('.catalog_nav_link:first').addClass('catalog_nav_active')
     }
+    mySticky();
   });
 
 	$('.catalog_kind_flex').click(function (){
     $('.catalog_kind_menu').toggleClass('catalog_kind_active');
     $('.catalog_kind_links').toggleClass('catalog_links_active');
-	});
+  });
+  
+  function mySticky() {
+    if ($(this).width() > 1550) {
+      if ($(this).scrollTop() > 169) {
+        $('.catalog_nav').addClass('sticky');
+      }
+      else if ($(this).scrollTop() < 169) {
+        $('.catalog_nav').removeClass('sticky');
+      }
+    }
+
+    // При ширине окна браузера больше 1200px
+    else if ($(this).width() > 1200) {
+      if ($(this).scrollTop() > 160) {
+        $('.catalog_nav').addClass('sticky');
+      }
+      else if ($(this).scrollTop() < 160) {
+        $('.catalog_nav').removeClass('sticky');
+      }
+    }
+
+    // При ширине окна браузера больше 992x
+    else if ($(this).width() > 992) {
+      if ($(this).scrollTop() > 152) {
+        $('.catalog_nav').addClass('sticky');
+      }
+      else if ($(this).scrollTop() < 152) {
+        $('.catalog_nav').removeClass('sticky');
+      }
+    }
+
+    // При ширине окна браузера больше 768px
+    else if ($(this).width() > 767) {
+      if ($(this).scrollTop() > 87) {
+        $('.catalog_nav').addClass('sticky');
+      }
+      else if ($(this).scrollTop() < 87) {
+        $('.catalog_nav').removeClass('sticky');
+      }
+    }
+
+    // При ширине окна браузера больше с 0px
+    else if ($(this).width() > 0) {
+      if ($(this).scrollTop() > 70) {
+        $('.catalog_nav').addClass('sticky');
+      }
+      else if ($(this).scrollTop() < 70) {
+        $('.catalog_nav').removeClass('sticky');
+      }
+    }
+  };
 
   $('#phone').mask("+7(999) 999-99-99");
 

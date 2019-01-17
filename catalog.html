@@ -302,7 +302,7 @@
 		</div>
 		<div class="catalog_products">
 			<div class="container">
-				<section id="section_meat">
+				<section id="section_meat" class="products_section">
 					<h3 class="meat title_level_3">Мякоть</h3>
 					<div class="product_items products_beef">
 						<div class="product_item">
@@ -390,7 +390,7 @@
 						</div>
 					</div>
 				</section>
-				<section id="section_bone">
+				<section id="section_bone" class="products_section">
 					<h3 class="meat title_level_3">Мякоть на кости</h3>
 					<div class="product_items products_mutton">
 						<div class="product_item">
@@ -561,7 +561,12 @@
 	<script src="libs/jquery.maskedinput.min.js"></script>
 	<script src="libs/jquery.malihu.PageScroll2id.min.js"></script>
 	<script>
-		$(".catalog_nav_link").mPageScroll2id();</script>
+		$(".catalog_nav_link").mPageScroll2id({
+				offset: 135
+			}
+		);
+		
+	</script>
 	<script src="js/main.js"></script>
 
 </body>

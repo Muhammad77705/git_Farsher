@@ -957,7 +957,6 @@ footer .header_logo {
 	width: 100%;
 }
 
-
 .catalog_nav {
 	padding: 16px 0;
 	margin-bottom: 32px;
@@ -965,6 +964,7 @@ footer .header_logo {
  .catalog_row {
 	flex-direction: column;
 	align-items: flex-start;
+	width: 100%;
 }
 
 .catalog_main_nav {
@@ -1254,6 +1254,7 @@ footer .header_logo {
 .product_item {
 	flex-basis: 375px;
 	margin: 0;
+	border-top: none;
 }
 
 /* Страница Каталог */
@@ -1486,9 +1487,12 @@ footer .header_logo {
 @media (max-width: 375px) {
 
 /* Страница Каталог */
+.catalog_kind_links li {
+	margin-left: 14px;
+}
+
 .catalog_kind_link {
 	font-size: 16px;
-	margin-left: 14px;
 }
 
 .catalog_nav_link {

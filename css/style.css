@@ -833,6 +833,7 @@ p {
 	position: relative;
 	top: -30px;
 	border-radius: 4px;
+	transition: 0.4s;
 }
 
 .product_img img {
@@ -842,7 +843,6 @@ p {
 
 .product_item:hover .product_img {
 	top: -32px;
-	transition: 0.4s;
 }
 
 .product_item:hover .product_img img {
@@ -1255,6 +1255,10 @@ p {
 .meat {
 	color: var(--black);
 	margin-bottom: 94px;
+}
+
+.products_section {
+	/* padding-top: 130px; */
 }
 
 /* Страница корзины */

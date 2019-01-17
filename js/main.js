@@ -25,19 +25,15 @@ $(function(){
   	$(myId).css('display','flex');
     $('.nav_banner').removeAttr('style');
    });
-
+  linkActive();
+  mySticky();
 	$('.product_marinades div').click(function (){
   	$(this).siblings().removeClass("marinade_checked");
   	$(this).addClass("marinade_checked");
  	});
 
   $(window).scroll(function () {
-    if ($('.catalog_nav_link').hasClass('mPS2id-highlight')) {
-      $('.catalog_nav_link').removeClass('catalog_nav_active')
-    }
-    else {
-      $('.catalog_nav_link:first').addClass('catalog_nav_active')
-    }
+    linkActive();
     mySticky();
   });
 
@@ -45,6 +41,15 @@ $(function(){
     $('.catalog_kind_menu').toggleClass('catalog_kind_active');
     $('.catalog_kind_links').toggleClass('catalog_links_active');
   });
+
+  function linkActive() {
+    if ($('.catalog_nav_link').hasClass('mPS2id-highlight')) {
+      $('.catalog_nav_link').removeClass('catalog_nav_active')
+    }
+    else {
+      $('.catalog_nav_link:first').addClass('catalog_nav_active')
+    }
+  }
   
   function mySticky() {
     if ($(this).width() > 1550) {
@@ -53,7 +58,7 @@ $(function(){
       }
       else if ($(this).scrollTop() < 169) {
         $('.catalog_nav').removeClass('sticky');
-      }}
+    }}
 
     // При ширине окна браузера больше 1200px
     else if ($(this).width() > 1200) {

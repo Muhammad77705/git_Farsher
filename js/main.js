@@ -53,8 +53,7 @@ $(function(){
       }
       else if ($(this).scrollTop() < 169) {
         $('.catalog_nav').removeClass('sticky');
-      }
-    }
+      }}
 
     // При ширине окна браузера больше 1200px
     else if ($(this).width() > 1200) {
@@ -63,8 +62,7 @@ $(function(){
       }
       else if ($(this).scrollTop() < 160) {
         $('.catalog_nav').removeClass('sticky');
-      }
-    }
+      }}
 
     // При ширине окна браузера больше 992x
     else if ($(this).width() > 992) {
@@ -73,8 +71,7 @@ $(function(){
       }
       else if ($(this).scrollTop() < 152) {
         $('.catalog_nav').removeClass('sticky');
-      }
-    }
+      }}
 
     // При ширине окна браузера больше 768px
     else if ($(this).width() > 767) {
@@ -83,8 +80,7 @@ $(function(){
       }
       else if ($(this).scrollTop() < 87) {
         $('.catalog_nav').removeClass('sticky');
-      }
-    }
+      }}
 
     // При ширине окна браузера больше с 0px
     else if ($(this).width() > 0) {
@@ -93,8 +89,7 @@ $(function(){
       }
       else if ($(this).scrollTop() < 70) {
         $('.catalog_nav').removeClass('sticky');
-      }
-    }
+      }}
   };
 
   $('#phone').mask("+7(999) 999-99-99");

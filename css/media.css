@@ -955,6 +955,7 @@ footer .header_logo {
 #products .container,
 .catalog_products .container {
 	width: 100%;
+	padding: 0 20px;
 }
 
 .catalog_nav {
@@ -965,6 +966,7 @@ footer .header_logo {
 	flex-direction: column;
 	align-items: flex-start;
 	width: 100%;
+	padding: 0 20px;
 }
 
 .catalog_main_nav {
@@ -1100,6 +1102,11 @@ footer .header_logo {
 .footer_row {
 	flex-direction: column;
 	align-items: center;
+}
+
+#products .container,
+.catalog_products .container {
+	padding: 0;
 }
 
 /* Главная страница */
@@ -1478,7 +1485,7 @@ footer .header_logo {
   padding: 8px 14px;
 }
 
-.catalog_products section:last-child .product_item {
+.catalog_products section:last-child .product_item:last-child {
 	border-bottom: none;
 }
 

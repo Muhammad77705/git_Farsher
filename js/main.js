@@ -79,13 +79,23 @@ $(function(){
       }}
 
     // При ширине окна браузера больше 768px
-    else if ($(this).width() > 767) {
+    else if ($(this).width() > 769) {
+      if ($(this).scrollTop() > 152) {
+        $('.catalog_nav').addClass('sticky');
+      }
+      else if ($(this).scrollTop() < 152) {
+        $('.catalog_nav').removeClass('sticky');
+      }}
+
+    // При ширине окна браузера больше 680px
+    else if ($(this).width() > 680) {
       if ($(this).scrollTop() > 87) {
         $('.catalog_nav').addClass('sticky');
       }
       else if ($(this).scrollTop() < 87) {
         $('.catalog_nav').removeClass('sticky');
-      }}
+      }
+    }
 
     // При ширине окна браузера больше с 0px
     else if ($(this).width() > 0) {

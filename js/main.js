@@ -97,7 +97,7 @@ $(function(){
       }
     }
 
-    // При ширине окна браузера больше с 0px
+    // При ширине окна браузера больше 0px
     else if ($(this).width() > 0) {
       if ($(this).scrollTop() > 70) {
         $('.catalog_nav').addClass('sticky');

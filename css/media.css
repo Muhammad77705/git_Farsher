@@ -253,6 +253,7 @@ footer .header_logo {
 @media (max-width: 992px) {
 	
 .header {
+	height: 100vh;
 	font-size: 18px;
 }
 
@@ -261,7 +262,8 @@ footer .header_logo {
 }
 
 .header_items {
-	display: none;
+	position: absolute;
+	bottom: 0;
 	width: 100%;
 	padding: 0 0 20px;
 	flex-direction: column;
@@ -317,7 +319,7 @@ footer .header_logo {
 .menu_mobile span::after {
   content: '';
   display: block;
-  transition: 0.1s;
+  transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .menu_mobile span::before {
@@ -365,7 +367,7 @@ footer .header_logo {
 	display: flex;
   align-items: center;
 	justify-content: space-between;
-	margin-bottom: 32px;
+	margin-bottom: 24px;
 }
 
 .submenu_toggle {
@@ -390,10 +392,9 @@ footer .header_logo {
 .submenu_toggle span::before{
   content: '';
   display: inline-block;
-  transition: 0.2s;
 	transform: rotate(90deg);
 	opacity: 1;
-	transition: .3s;
+	transition: .3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .submenu_toggle_active span:before {
@@ -470,7 +471,7 @@ footer .header_logo {
 
 .submenu_item {
 	display: none;
-	margin-top: 24px;
+	margin: 24px 0 32px;
 	padding-left: 60px;
 }
 
@@ -1159,6 +1160,10 @@ footer .header_logo {
 	padding-top: 0;
 }
 
+.meat {
+	padding: 0 20px;
+}
+
 .product_descr {
 	font-size: 13px;
 }
@@ -1386,8 +1391,7 @@ footer .header_logo {
 	margin-left: 2px;	
 }
 
-.meat  {
-	padding: 0 20px;
+.meat {
 	margin-bottom: 4px;
 }
 

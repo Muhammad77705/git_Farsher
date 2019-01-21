@@ -223,11 +223,10 @@ p {
 }
 
 .header_cart_wrap {
-	background-color: var(--red);
-	width: 40px;
-	height: 40px;
+	position: relative;
+	width: 50px;
+	height: 50px;
 	margin-right: 12px;
-	border-radius: 50%;
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -236,16 +235,28 @@ p {
 	color: var(--white);
 }
 
-/* .header_cart:hover .header_cart_wrap {
-	width: 50px;
-	height: 50px;
+.header_cart_wrap:before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(1);
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+	border-radius: 50%;
+	background-color: var(--red);
+	transition: transform .3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-.header_cart:hover {
-	padding: 23px 25px 29px;
-} */
+.header_cart:hover .header_cart_wrap:before {
+	transform: translate(-50%, -50%) scale(1.1);
+}
 
 .header_cart_wrap svg {
+	position: relative;
+	z-index: 1;
 	margin: auto;
 }
 
@@ -279,7 +290,7 @@ p {
 	top: 100%;
 	left: 0;
 	transform-origin: left;
-	z-index: 20;
+	z-index: 5;
 	width: 100%;
 	padding: 32px 0;
 	background-color: var(--white);
@@ -495,18 +506,19 @@ p {
 }
 
 .nav_banner {
-    position: absolute;
-    left: 50%;
-    bottom: 144px;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  bottom: 144px;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
 	display: flex;
-    flex-direction: row;
-    max-width: 1120px;
-    width: 100%;
-    margin: auto;
+  flex-direction: row;
+  max-width: 1120px;
+  width: 100%;
+	margin: auto;
+	z-index: 2;
 }
 
 .slick-dots {
@@ -532,32 +544,32 @@ p {
 	background-size: 100% 100%;
 	display: inline-block;
 	height: 10px;
-    width: 16px;
-    opacity: 1;
+  width: 16px;
+  opacity: 1;
 }
 
 .slick-prev:before {
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .slick-next:after {
-    -webkit-transform: rotate(270deg);
-    -ms-transform: rotate(270deg);
-    -o-transform: rotate(270deg);
-    transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
 }
 
 .slick-prev, .slick-next {
-    position: static;
-    width: 16px;
-    height: 16px;
-    -webkit-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
-    -o-transform: translate(0, 0);
-    transform: translate(0, 0);
+  position: static;
+  width: 16px;
+  height: 16px;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
 }
 
 .slick-prev {
@@ -688,7 +700,7 @@ p {
 	position: absolute;
 	top: 0;
 	left: 50%;
-	z-index: 99;
+	z-index: 3;
 	transform: translate(-50%,-50%);
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -700,7 +712,7 @@ p {
 }
 
 .kind_block {
-	z-index: 10;
+	z-index: 3;
 	flex-basis: 33.33%;
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -876,9 +888,11 @@ p {
 	flex-basis: 50%;
 	text-align: center;
 	padding: 10px;
+	border: none;
 	border: 1px solid var(--bdgrey);
 	border-radius: 0 4px 4px 0;
 	cursor: pointer;
+	background: transparent;
 	transition: .3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
@@ -1117,7 +1131,7 @@ p {
 }
 
 .sticky {
-	z-index: 100;
+	z-index: 4;
 	padding: 24px 0 17px;
 	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 	transition: 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -1239,7 +1253,7 @@ p {
 	transition: 1s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-.meat {
+.section_title {
 	color: var(--black);
 	margin-bottom: 94px;
 }
@@ -1388,8 +1402,9 @@ p {
 	justify-content: center;
 	-ms-align-items: center;
 	align-items: center;
-	border-radius: 4px;
 	color: var(--kgrey);
+	border-radius: 4px;
+	transition: .2s cubic-bezier(0.215, 0.61, 0.355, 1)
 }
 
 .cart_add:hover,

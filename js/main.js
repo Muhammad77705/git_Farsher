@@ -1,7 +1,9 @@
 $(function(){
 
   $('.banner_carousel_items').slick({
-    dots: true,
+    dots: true, 
+    autoplay: true, 
+    autoplaySpeed: 2000,
     appendArrows:'.nav_banner',
     appendDots:'.nav_banner'
   });
@@ -9,13 +11,39 @@ $(function(){
   $('.menu_mobile').click(function (e) {
     e.preventDefault();
     $(this).toggleClass('menu_mobile_active');
-    $('.header_items').slideToggle();
+    $('.header_wrap').toggleClass('header_wrap_active');
+    $('body').toggleClass('body_hidden');
+    $('.header_items').toggleClass('header_items_active');
   });
 
-  $('.submenu_toggle').click(function () {
-    $(this).toggleClass('submenu_toggle_active');
-    $(this).parent().siblings().slideToggle();
-  });
+  // $('.menuButton').click(function () {
+  //   $(this).toggleClass('menuButton_active');
+  // });
+
+  // $('.submenu_toggle').click(function () {
+  //   $(this).toggleClass('submenu_toggle_active');
+  //   // $('.submenu_item').hide();
+  //   $(this).parent().siblings().slideToggle();
+  // });
+
+    var $col = $('.submenu_block'),
+      $plus = $('.submenu_toggle'),
+      $sub = $('.submenu_item');
+
+    $plus.on('click', function () {
+      var subHeight = $(this).parent().siblings($sub).height();
+
+      $(this).parent().parent().toggleClass('submenu_block_active');
+
+      if ($(this).parent().parent().hasClass('submenu_block_active')) {
+        $(this).addClass('submenu_toggle_active')
+          .parent().parent().css('max-height', (60 + subHeight) + 'px')
+          .siblings($col).removeClass('submenu_block_active').css('max-height', 30 + 'px')
+          .find($plus).removeClass('submenu_toggle_active');
+      } else {
+        $(this).removeClass('submenu_toggle_active').parent().parent().css('max-height', 30 + 'px');
+      }
+    });
 
 	$('.product_kind_blocks div').click(function (){
   	var myId = ".products_"+$(this).attr("id");
@@ -27,7 +55,7 @@ $(function(){
    });
   linkActive();
   mySticky();
-	$('.product_marinades div').click(function (){
+	$('.product_marinades button').click(function (){
   	$(this).siblings().removeClass("marinade_checked");
   	$(this).addClass("marinade_checked");
  	});
@@ -80,29 +108,19 @@ $(function(){
 
     // При ширине окна браузера больше 768px
     else if ($(this).width() > 769) {
-      if ($(this).scrollTop() > 152) {
+      if ($(this).scrollTop() > 82) {
         $('.catalog_nav').addClass('sticky');
       }
-      else if ($(this).scrollTop() < 152) {
+      else if ($(this).scrollTop() < 82) {
         $('.catalog_nav').removeClass('sticky');
       }}
 
-    // При ширине окна браузера больше 680px
-    else if ($(this).width() > 680) {
-      if ($(this).scrollTop() > 87) {
-        $('.catalog_nav').addClass('sticky');
-      }
-      else if ($(this).scrollTop() < 87) {
-        $('.catalog_nav').removeClass('sticky');
-      }
-    }
-
     // При ширине окна браузера больше 0px
     else if ($(this).width() > 0) {
-      if ($(this).scrollTop() > 70) {
+      if ($(this).scrollTop() > 65) {
         $('.catalog_nav').addClass('sticky');
       }
-      else if ($(this).scrollTop() < 70) {
+      else if ($(this).scrollTop() < 65) {
         $('.catalog_nav').removeClass('sticky');
       }}
   };

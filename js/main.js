@@ -16,16 +16,6 @@ $(function(){
     $('.header_items').toggleClass('header_items_active');
   });
 
-  // $('.menuButton').click(function () {
-  //   $(this).toggleClass('menuButton_active');
-  // });
-
-  // $('.submenu_toggle').click(function () {
-  //   $(this).toggleClass('submenu_toggle_active');
-  //   // $('.submenu_item').hide();
-  //   $(this).parent().siblings().slideToggle();
-  // });
-
     var $col = $('.submenu_block'),
       $plus = $('.submenu_toggle'),
       $sub = $('.submenu_item');

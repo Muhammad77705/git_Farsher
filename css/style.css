@@ -742,19 +742,9 @@ p {
 	background: var(--red);
 	color: var(--white);
 	border: none;
-	/* border-left:  1px solid var(--red);
-	border-right: 1px solid var(--red); */
 	cursor: default;
 	transition: .4s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
-/* 
-#products .kind_border_left {
-	border-right: 1px solid var(--white);
-}
-
-#products .kind_border_right {
-	border-left:  1px solid var(--white);
-} */
 
 .kind_block:nth-child(2) {
 	border-radius: 4px 0 0 4px;

@@ -883,6 +883,14 @@ p {
 	padding: 0 32px;
 }
 
+.no_marinade{
+	border-radius: 4px 0 0 4px;
+}
+
+.yes_marinade {
+	border-radius: 0 4px 4px 0;
+}
+
 .no_marinade,
 .yes_marinade {
 	flex-basis: 50%;
@@ -890,7 +898,6 @@ p {
 	padding: 10px;
 	border: none;
 	border: 1px solid var(--bdgrey);
-	border-radius: 0 4px 4px 0;
 	cursor: pointer;
 	background: transparent;
 	transition: .3s cubic-bezier(0.215, 0.61, 0.355, 1);

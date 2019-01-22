@@ -170,8 +170,8 @@
 							</div>
 						</div>
 					</li>
-					<li class="nav_li"><a href="#" class="header_nav_link">Доставка и оплата</a></li>
-					<li class="nav_li"><a href="#about" class="header_nav_link">О нас</a></li>
+					<li class="nav_li"><a href="cart.html#registratic" class="header_nav_link">Доставка и оплата</a></li>
+					<li class="nav_li"><a href="#0" class="header_nav_link">О нас</a></li>
 					<li class="nav_li header_call_us">
 						<a href="contacts.html" class="header_nav_link">Контакты</a>
 						<a href="tel:89272314641" class="call_us_phone">Позвонить нам</a>
@@ -256,7 +256,7 @@
 									Итого
 									<span class="cart_all_summ">529 ₽</span>
 								</div>
-								<a href="#" class="popup_get">Оформить заказ</a>
+								<a href="cart.html" class="popup_get">Оформить заказ</a>
 							</div>
 						</div>
 					</div>
@@ -379,19 +379,10 @@
 	<script src="libs/slick/slick.min.js"></script>
 	<script src="https://api-maps.yandex.ru/2.1/?apikey=<dcaeaafa-1aa1-4a1d-8462-d75780c1eb42>&lang=ru_RU" type="text/javascript"></script>
 	<script>
-		// Функция ymaps.ready() будет вызвана, когда
-		// 	загрузятся все компоненты API, а также когда будет готово DOM-дерево.
 			ymaps.ready(init);
-			function init() {
-				// Создание карты.    
+			function init() {ъ   
 				var myMap = new ymaps.Map("map", {
-					// Координаты центра карты.
-					// Порядок по умолчанию: «широта, долгота».
-					// Чтобы не определять координаты центра карты вручную,
-					// воспользуйтесь инструментом Определение координат.
 					center: [42.990897394299935, 47.49955081907552],
-					// Уровень масштабирования. Допустимые значения:
-					// от 0 (весь мир) до 19.
 					zoom: 13,
 					controls: []
 				});
@@ -416,6 +407,9 @@
 					}
 					var myClusterer = new ymaps.Clusterer(
 						// clusterIcons: []
+						// clusterDisableClickZoom: false,
+						clusterOpenBalloonOnClick: false
+
 					);
 					
 					myClusterer.add(myGeoObjects);

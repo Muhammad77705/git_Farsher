@@ -3,7 +3,7 @@ $(function(){
   $('.banner_carousel_items').slick({
     dots: true, 
     autoplay: true, 
-    autoplaySpeed: 2000,
+    autoplaySpeed: 5000,
     appendArrows:'.nav_banner',
     appendDots:'.nav_banner'
   });

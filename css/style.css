@@ -141,7 +141,7 @@ p {
 
 .header_menu svg {
 	width: 16px;
-	height: 12px;
+	height: 13px;
 	margin-right: 12px;
 	color: var(--kgrey);
 }
@@ -800,7 +800,7 @@ p {
 	-ms-flex-wrap: wrap;
 	-o-flex-wrap: wrap;
 	flex-wrap: wrap;
-	margin: 0 -16px 9px;
+	margin: 0 -16px -95px;
 }
 
 #products .products_mutton {
@@ -963,6 +963,7 @@ p {
 	display: -o-flex;
 	display: flex;
 	justify-content: center;
+	margin-top: 104px;
 }
 
 .proceed_btn_link {
@@ -1108,8 +1109,7 @@ p {
 
 /* Страница Каталог */
 #catalog {
-	padding-top: 57px;
-	margin-bottom: 25px;
+	padding: 57px 0 87px;
 }
 
 .catalog_nav {
@@ -1117,7 +1117,6 @@ p {
 	top: -1px;
 	z-index: 1;
 	padding: 23px 0 17px;
-	margin-bottom: 47px;
 	color: var(--black);
 	background-color: var(--white);
 }
@@ -1259,8 +1258,10 @@ p {
 }
 
 .products_section {
-	/* padding-top: 130px; */
+	padding-top: 47px;
+	margin-bottom: 33px;
 }
+
 
 /* Страница корзины */
 #cart {

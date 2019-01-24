@@ -35,6 +35,13 @@ $(function(){
       }
     });
 
+
+  $('.product_marinades .marinades_btn').click(function () {
+    var data_btn = $(this).attr('data-marinade');
+    $(this).parent().siblings('.product_info').children('.product_price').children().text(data_btn);
+    console.log($(this).attr('data-marinade'));
+  });
+
 	$('.product_kind_blocks div').click(function (){
   	var myId = ".products_"+$(this).attr("id");
   	$('.product_kind_blocks div').removeClass("kind_block_active");
@@ -43,21 +50,24 @@ $(function(){
   	$(myId).css('display','flex');
     $('.nav_banner').removeAttr('style');
    });
+
   linkActive();
   mySticky();
+
 	$('.product_marinades button').click(function (){
   	$(this).siblings().removeClass("marinade_checked");
   	$(this).addClass("marinade_checked");
  	});
 
+  $('.catalog_kind_flex').click(function () {
+    $('.catalog_kind_menu').toggleClass('catalog_kind_active');
+    $('.catalog_kind_links').toggleClass('catalog_links_active');
+  });
+
+
   $(window).scroll(function () {
     linkActive();
     mySticky();
-  });
-
-	$('.catalog_kind_flex').click(function (){
-    $('.catalog_kind_menu').toggleClass('catalog_kind_active');
-    $('.catalog_kind_links').toggleClass('catalog_links_active');
   });
 
   function linkActive() {

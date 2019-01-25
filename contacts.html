@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
 	<meta charset="UTF-8">
 	<title>Фаршер</title>
@@ -10,10 +9,9 @@
 	<link rel="stylesheet" href="libs/slick/slick-theme.css">
 	<link rel="stylesheet" href="libs/slick/slick.css">
 	<link rel="stylesheet" href="libs/normalize.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/media.css">
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="css/media.min.css">
 </head>
-
 <body>
 	<header class="header">
 		<div class="header_wrap">
@@ -374,7 +372,6 @@
 		</div>
 	</footer>
 
-
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script src="libs/slick/slick.min.js"></script>
 	<script src="https://api-maps.yandex.ru/2.1/?apikey=<dcaeaafa-1aa1-4a1d-8462-d75780c1eb42>&lang=ru_RU" type="text/javascript"></script>
@@ -405,12 +402,7 @@
 							});
 
 					}
-					var myClusterer = new ymaps.Clusterer(
-						// clusterIcons: []
-						// clusterDisableClickZoom: false,
-						// clusterOpenBalloonOnClick: false
-
-					);
+					var myClusterer = new ymaps.Clusterer();
 					
 					myClusterer.add(myGeoObjects);
 					myMap.geoObjects.add(myClusterer);
@@ -419,7 +411,6 @@
 					position: { top: 6, left: 6 }
 				});
 			}
-			
 
 	</script>
 	<script src="libs/jquery.maskedinput.min.js"></script>

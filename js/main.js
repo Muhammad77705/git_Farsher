@@ -1,5 +1,6 @@
 $(function(){
 
+  /* Slick-slider */
   $('.banner_carousel_items').slick({
     dots: true, 
     autoplay: true, 
@@ -8,19 +9,19 @@ $(function(){
     appendDots:'.nav_banner'
   });
 
+  // Выпадающее меню
   $('.menu_mobile').click(function (e) {
     e.preventDefault();
     $(this).toggleClass('menu_mobile_active');
-    $('.header_wrap').toggleClass('header_wrap_active');
     $('body').toggleClass('body_hidden');
     $('.header_items').toggleClass('header_items_active');
   });
 
-    var $col = $('.submenu_block'),
-      $plus = $('.submenu_toggle'),
-      $sub = $('.submenu_item');
+  var $col = $('.submenu_block'),
+    $plus = $('.submenu_toggle'),
+    $sub = $('.submenu_item');
 
-    $plus.on('click', function () {
+    $plus.click(function () {
       var subHeight = $(this).parent().siblings($sub).height();
 
       $(this).parent().parent().toggleClass('submenu_block_active');
@@ -35,35 +36,31 @@ $(function(){
       }
     });
 
-
-  $('.product_marinades .marinades_btn').click(function () {
-    var data_btn = $(this).attr('data-marinade');
-    $(this).parent().siblings('.product_info').children('.product_price').children().text(data_btn);
-    console.log($(this).attr('data-marinade'));
+// Табы на главное странице
+  $('.product_kind_blocks div').click(function () {
+    var myId = ".products_" + $(this).attr("id");
+    $('.product_kind_blocks div').removeClass("kind_block_active");
+    $(this).addClass("kind_block_active");
+    $(".hide_products").hide();
+    $(myId).css('display', 'flex');
+    $('.nav_banner').removeAttr('style');
   });
 
-	$('.product_kind_blocks div').click(function (){
-  	var myId = ".products_"+$(this).attr("id");
-  	$('.product_kind_blocks div').removeClass("kind_block_active");
-  	$(this).addClass("kind_block_active");
-  	$(".hide_products").hide();
-  	$(myId).css('display','flex');
-    $('.nav_banner').removeAttr('style');
-   });
-
-  linkActive();
-  mySticky();
-
-	$('.product_marinades button').click(function (){
-  	$(this).siblings().removeClass("marinade_checked");
-  	$(this).addClass("marinade_checked");
- 	});
+  // Переключатель кнопок "Без маринада", "В маринаде"
+  $('.product_marinades .marinades_btn').click(function () {
+    $(this).siblings().removeClass("marinade_checked");
+    $(this).addClass("marinade_checked");
+    var data_btn = $(this).attr('data-marinade');
+    $(this).parent().siblings('.product_info').children('.product_price').children().text(data_btn);
+  });
 
   $('.catalog_kind_flex').click(function () {
     $('.catalog_kind_menu').toggleClass('catalog_kind_active');
     $('.catalog_kind_links').toggleClass('catalog_links_active');
   });
 
+  linkActive();
+  mySticky();
 
   $(window).scroll(function () {
     linkActive();

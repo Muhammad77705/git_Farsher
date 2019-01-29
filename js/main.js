@@ -59,6 +59,10 @@ $(function(){
     $('.catalog_kind_links').toggleClass('catalog_links_active');
   });
 
+  $('.catalog_kind_title').click(function (e) {
+    e.preventDefault();
+  });
+
   linkActive();
   mySticky();
 

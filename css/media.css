@@ -448,7 +448,7 @@ footer .header_logo {
 	margin-right: 20px;
 	-webkit-transition: .3s var(--effect);
 	-o-transition: .3s var(--effect);
-	transition: .3s var(--effect);
+	transition: color .3s var(--effect), background-color .3s var(--effect);
 }
 
 .call_us_phone:hover {
@@ -489,16 +489,16 @@ footer .header_logo {
   background-color: var(--kgrey);
 }
 
-.submenu_toggle span::before{
+.submenu_toggle span::before {
   content: '';
   display: inline-block;
 	-webkit-transform: rotate(90deg);
 	-ms-transform: rotate(90deg);
 	transform: rotate(90deg);
 	opacity: 1;
-	-webkit-transition: .3s var(--effect);
-	-o-transition: .3s var(--effect);
-	transition: .3s var(--effect);
+	-webkit-transition: transform .3s var(--effect);
+	-o-transition: transform .3s var(--effect);
+	transition: transform .3s var(--effect);
 }
 
 .submenu_toggle_active span:before {
@@ -602,9 +602,9 @@ footer .header_logo {
 .submenu_block {
 	max-height: 30px;
 	overflow: hidden;
-	-webkit-transition: 0.6s var(--effect);
-	-o-transition: 0.6s var(--effect);
-	transition: 0.6s var(--effect);
+	-webkit-transition: max-height 0.6s var(--effect);
+	-o-transition: max-height 0.6s var(--effect);
+	transition: max-height 0.6s var(--effect);
 	margin-bottom: 32px;
 }
 

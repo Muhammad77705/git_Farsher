@@ -5,6 +5,8 @@ $(function(){
     dots: true, 
     autoplay: true, 
     autoplaySpeed: 5000,
+    speed:0,
+    // waitForAnimate:false,
     appendArrows:'.nav_banner',
     appendDots:'.nav_banner'
   });

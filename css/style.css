@@ -610,6 +610,11 @@ p {
 	max-width: 5000px;
 }
 
+#banner .slick-active {
+	opacity: 1;
+	visibility: visible;
+}
+
 .slick-slide {
 	outline: none;
 }
@@ -753,6 +758,9 @@ p {
 	height: 866px;
 	color: var(--white);
 	padding: 15px 0 100px;
+	opacity: 0;
+	visibility: hidden;
+	transition: .6s var(--effect);
 }
 
 .slick-initialized .slick-slide {
@@ -990,12 +998,12 @@ p {
 
 .product_img img {
 	border-radius: 4px;
-	-webkit-transition: .4s var(--effect);
-	-o-transition: .4s var(--effect);
-	transition: .4s var(--effect);
+	-webkit-transition: .8s var(--effect);
+	-o-transition: .8s var(--effect);
+	transition: .8s var(--effect);
 }
 
-.product_item:hover .product_img {
+.product_img:hover {
 	top: -32px;
 }
 
@@ -1095,6 +1103,7 @@ p {
 }
 
 .product_btn {
+	position: relative;
 	-ms-flex-preferred-size: 50%;
 	flex-basis: 50%;
 	display: inline-block;
@@ -1106,25 +1115,15 @@ p {
 	background-color: var(--red);
 	border-radius: 4px;
 	cursor: pointer;
-	-webkit-transition: .3s var(--effect);
-	-o-transition: .3s var(--effect);
-	transition: .3s var(--effect);
-}
-
-.banner_cart:hover,
-.product_btn:hover,
-.form_btn:hover {
-	-webkit-transform: translateY(-3px);
-	-ms-transform: translateY(-3px);
-	transform: translateY(-3px);
+	-webkit-transition: .2s var(--effect);
+	-o-transition: .2s var(--effect);
+	transition: .2s var(--effect);
 }
 
 .banner_cart:active,
 .product_btn:active,
 .form_btn:active {
-	-webkit-transform: translateY(0);
-	-ms-transform: translateY(0);
-	transform: translateY(0);
+	top: -3px;
 }
 
 .proceed_btn {
@@ -1157,33 +1156,9 @@ p {
 	transition: .4s var(--effect);
 }
 
-.proceed_btn_link:before {
-  position: absolute;
-  top: 0;
-	left: -50%;
-	content: "";
-  background-color: rgba(255, 255, 255, 0.5);
-  height: 100%;
-  width: 3em;
-  display: block;
-	-webkit-transform: skewX(-45deg) translateX(0);
-	-ms-transform: skewX(-45deg) translateX(0);
-	transform: skewX(-45deg) translateX(0);
-}
-
 .proceed_btn_link:hover {
 	background-color: var(--red);
 	color: var(--white);
-}
-
-.proceed_btn_link:hover:before {
-	left: 100%;
-  -webkit-transform: skewX(-45deg) translateX(100%);
-  -ms-transform: skewX(-45deg) translateX(100%);
-      transform: skewX(-45deg) translateX(100%);
-  -webkit-transition: all .6s ease-in-out;
-  -o-transition: all .6s ease-in-out;
-  transition: all .6s ease-in-out;
 }
 
 /* О нас */

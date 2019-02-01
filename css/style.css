@@ -52,6 +52,8 @@ html {
 	--red: #c00d0d;
 	--kgrey: #555;
 	--bdgrey: #ececec;
+	--red_hover: #D60E0E;
+	--red_active: #B00B0B;;
 	--effect: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
@@ -610,11 +612,6 @@ p {
 	max-width: 5000px;
 }
 
-#banner .slick-active {
-	opacity: 1;
-	visibility: visible;
-}
-
 .slick-slide {
 	outline: none;
 }
@@ -747,7 +744,8 @@ p {
 /* =========== */
 
 .banner_carousel_item { 
-	background: url(../img/bg/banner.png) no-repeat 100% 0%;
+	background-repeat: no-repeat;
+	background-position: 100% 0%;
 	background-size: 100% 100%;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -757,19 +755,12 @@ p {
 	align-items: center;
 	height: 866px;
 	color: var(--white);
-	padding: 15px 0 100px;
-	opacity: 0;
-	visibility: hidden;
-	transition: .6s var(--effect);
-}
-
-.slick-initialized .slick-slide {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
+	padding: 215px 0 100px;
 }
 
 .banner_content {
+	display: flex;
+	flex-direction: column;
 	max-width: 390px;
 	width: 100%;
 }
@@ -794,9 +785,9 @@ p {
 	line-height: 25px;
   overflow: hidden;
   -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
+    text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
 
@@ -832,9 +823,7 @@ p {
 	font-weight: 700;
 	font-size: 14px;
 	border-radius: 4px;
-	-webkit-transition: -webkit-transform .3s var(--effect);
-	-o-transition: transform .3s var(--effect);
-	transition: transform .3s var(--effect), -webkit-transform .3s var(--effect);
+	transition: background-color .4s var(--effect);
 	outline: none;
 }
 
@@ -965,7 +954,6 @@ p {
 .product_item {
 	-ms-flex-preferred-size: calc(33.33% - 32px);
 	flex-basis: calc(33.33% - 32px);
-	height: 585px;
 	margin: 0 16px 95px;
 	border: 1px solid var(--bdgrey);
 	display: -moz-flex;
@@ -1021,58 +1009,8 @@ p {
 
 .product_descr {
 	font-size: 14px;
-	margin-bottom: 24px;
+	margin-bottom: 40px;
 	line-height: 1.42;
-	overflow: hidden;
-  -o-text-overflow: ellipsis;
-     text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
-}
-
-.product_btns {
-	margin-top: auto;
-}
-
-.product_marinades {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	margin: auto 0 24px;
-	padding: 0 32px;
-}
-
-.marinades_btn {
-	-ms-flex-preferred-size: 50%;
-	flex-basis: 50%;
-	font-weight: 500;
-	font-size: 12px;
-	text-align: center;
-	padding: 10px;
-	border: none;
-	border: 1px solid var(--bdgrey);
-	color: rgba(0, 0, 0, .24);
-	cursor: pointer;
-	background: transparent;
-	-webkit-transition: .3s var(--effect);
-	-o-transition: .3s var(--effect);
-	transition: .3s var(--effect);
-}
-
-.marinades_btn:first-child {
-	border-right: 1px solid transparent;
-	border-radius: 4px 0 0 4px;
-}
-
-.marinades_btn:last-child {
-	border-left: 1px solid transparent;
-	border-radius: 0 4px 4px 0;
-}
-
-.product_marinades .marinade_checked {
-	color: var(--red);
-	border: 1px solid var(--red);
 }
 
 .product_info {
@@ -1091,6 +1029,7 @@ p {
 	align-items: center;
 	border-top: 1px solid var(--bdgrey);
 	padding: 24px 32px;
+	margin-top: auto;
 }
 
 .product_price {
@@ -1103,7 +1042,6 @@ p {
 }
 
 .product_btn {
-	position: relative;
 	-ms-flex-preferred-size: 50%;
 	flex-basis: 50%;
 	display: inline-block;
@@ -1115,15 +1053,21 @@ p {
 	background-color: var(--red);
 	border-radius: 4px;
 	cursor: pointer;
-	-webkit-transition: .2s var(--effect);
-	-o-transition: .2s var(--effect);
-	transition: .2s var(--effect);
+	-webkit-transition: .4s var(--effect);
+	-o-transition: .4s var(--effect);
+	transition: .4s var(--effect);
+}
+
+.banner_cart:hover,
+.product_btn:hover,
+.form_red_hover {
+	background-color: var(--red_hover);
 }
 
 .banner_cart:active,
 .product_btn:active,
 .form_btn:active {
-	top: -3px;
+	background-color: var(--red_active);
 }
 
 .proceed_btn {
@@ -1866,9 +1810,7 @@ p {
 	color: var(--white);
 	padding: 15px 32px;
 	border-radius: 4px;
-	-webkit-transition: -webkit-transform .3s var(--effect);
-	-o-transition: transform .3s var(--effect);
-	transition: transform .3s var(--effect), -webkit-transform .3s var(--effect);
+	transition: background-color .4s var(--effect);
 }
 
 /* Страницы Контакты */

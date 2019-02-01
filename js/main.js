@@ -5,11 +5,31 @@ $(function(){
     dots: true, 
     autoplay: true, 
     autoplaySpeed: 5000,
-    speed:0,
+    speed: 1200,
+    fade: true,
     // waitForAnimate:false,
     appendArrows:'.nav_banner',
     appendDots:'.nav_banner'
   });
+
+  var len_fit = 7; // According to your question, 10 letters can fit in.
+  var un = $('.banner_title');
+  // Get the lenght of user name.
+  var len_user_name = un.html().length;
+  console.log(len_user_name); //5
+  for (var a = 0; a < .length; index++) {
+    const element = array[index];
+    
+  }
+    if(len_fit < len_user_name ){
+    // Calculate the new font size.
+      var size_now = parseInt(un.css("font-size"));
+      console.log(size_now);
+      var size_new = size_now * len_fit/len_user_name;
+      console.log(size_new);
+    // Set the new font size to the user name.
+    un.css("font-size",size_new); 
+  }
 
   // Выпадающее меню
   $('.menu_mobile').click(function (e) {
@@ -46,14 +66,6 @@ $(function(){
     $(".hide_products").hide();
     $(myId).css('display', 'flex');
     $('.nav_banner').removeAttr('style');
-  });
-
-  // Переключатель кнопок "Без маринада", "В маринаде"
-  $('.product_marinades .marinades_btn').click(function () {
-    $(this).siblings().removeClass("marinade_checked");
-    $(this).addClass("marinade_checked");
-    var data_btn = $(this).attr('data-marinade');
-    $(this).parent().siblings('.product_info').children('.product_price').children().text(data_btn);
   });
 
   $('.catalog_kind_flex').click(function () {

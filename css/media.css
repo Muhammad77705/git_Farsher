@@ -965,7 +965,7 @@ footer .header_logo {
 	padding: 32px 0;
 }
 
-#banner .container {
+#banners .container {
 	height: 100%;
 }
 
@@ -1295,6 +1295,11 @@ footer .header_logo {
 	flex-direction: column;
 }
 
+/* Модальное окно */
+.modal_title {
+	font-size: 24px;
+}
+
 }
 
 @media (max-width: 680px) {
@@ -1538,7 +1543,7 @@ footer .header_logo {
 .catalog_row,
 .submenu_blocks,
 .footer_row,
-#banner .container {
+#banners .container {
 	padding: 0 20px;
 }
 

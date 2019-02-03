@@ -12,24 +12,40 @@ $(function(){
     appendDots:'.nav_banner'
   });
 
-  var len_fit = 7; // According to your question, 10 letters can fit in.
-  var un = $('.banner_title');
-  // Get the lenght of user name.
-  var len_user_name = un.html().length;
-  console.log(len_user_name); //5
-  for (var a = 0; a < .length; index++) {
-    const element = array[index];
+  $('.popup_slider_main').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true,
+    asNavFor: '.popup_slider_items'
+  });
+  $('.popup_slider_items').slick({
+    // infinite: false,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    asNavFor: '.popup_slider_main',
+    // centerMode: true,
+    focusOnSelect: true,
+    arrows: true
+  });
+
+  // var len_fit = 7; // According to your question, 10 letters can fit in.
+  // var un = $('.banner_title');
+  // // Get the lenght of user name.
+  // var len_user_name = un.html().length;
+  // console.log(len_user_name); //5
+  // for (var a = 0; a < .length; index++) {
+  //   const element = array[index];
     
-  }
-    if(len_fit < len_user_name ){
-    // Calculate the new font size.
-      var size_now = parseInt(un.css("font-size"));
-      console.log(size_now);
-      var size_new = size_now * len_fit/len_user_name;
-      console.log(size_new);
-    // Set the new font size to the user name.
-    un.css("font-size",size_new); 
-  }
+  // }
+  //   if(len_fit < len_user_name ){
+  //   // Calculate the new font size.
+  //     var size_now = parseInt(un.css("font-size"));
+  //     console.log(size_now);
+  //     var size_new = size_now * len_fit/len_user_name;
+  //     console.log(size_new);
+  //   // Set the new font size to the user name.
+  //   un.css("font-size",size_new); 
+  // }
 
   // Выпадающее меню
   $('.menu_mobile').click(function (e) {
@@ -58,6 +74,22 @@ $(function(){
       }
     });
 
+  // Переключатель с блока "Килограммы" на "Штуки"
+  $('.popup_block').click(function () {
+    $(this).children('.radio').prop("checked", true);
+    $(this).siblings().removeClass("popup_block_active");
+    $(this).addClass("popup_block_active").children('input');
+  });
+
+  // Переключатель кнопок маринада
+  $('.popup_marinades .marinades_btn').click(function () {
+    $(this).siblings().removeClass("marinade_checked");
+    $(this).addClass("marinade_checked");
+    var data_btn = $(this).attr('data-marinade');
+    $(this).parent().siblings('.popup_info').children('.product_price').children().text(data_btn);
+  });	
+
+
 // Табы на главное странице
   $('.product_kind_blocks div').click(function () {
     var myId = ".products_" + $(this).attr("id");
@@ -66,6 +98,14 @@ $(function(){
     $(".hide_products").hide();
     $(myId).css('display', 'flex');
     $('.nav_banner').removeAttr('style');
+  });
+
+  $('.social_callback').click(function () {
+    $('.modal').addClass('modal_active');
+  });
+
+  $('.modal_close').click(function () {
+    $('.modal').removeClass('modal_active');
   });
 
   $('.catalog_kind_flex').click(function () {
@@ -140,6 +180,6 @@ $(function(){
       }}
   };
 
-  $('#phone').mask("+7(999) 999-99-99");
+  $('#phone, .modal_number').mask("+7(999) 999-99-99");
 
 });

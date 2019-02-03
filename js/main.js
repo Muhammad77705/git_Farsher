@@ -13,19 +13,21 @@ $(function(){
   });
 
   $('.popup_slider_main').slick({
+    infinite: false,
     slidesToShow: 1,
     slidesToScroll: 1,
     fade: true,
-    asNavFor: '.popup_slider_items'
+    asNavFor: '.popup_slider_items',
+    arrows: false
   });
   $('.popup_slider_items').slick({
-    // infinite: false,
+    infinite: false,
     slidesToShow: 5,
     slidesToScroll: 1,
     asNavFor: '.popup_slider_main',
     // centerMode: true,
     focusOnSelect: true,
-    arrows: true
+    
   });
 
   // var len_fit = 7; // According to your question, 10 letters can fit in.
@@ -98,6 +100,14 @@ $(function(){
     $(".hide_products").hide();
     $(myId).css('display', 'flex');
     $('.nav_banner').removeAttr('style');
+  });
+
+  $('.product_btn').click(function (e) {
+    $('.product_popup').addClass('product_popup_active');
+  });
+
+  $('.popup_close').click(function () {
+    $('.product_popup').removeClass('product_popup_active');
   });
 
   $('.social_callback').click(function () {

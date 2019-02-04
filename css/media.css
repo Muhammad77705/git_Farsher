@@ -253,6 +253,14 @@ footer .header_logo {
 	font-size: 36px;
 }
 
+/* СТраница Благодарности */
+.thanks_text {
+	font-size: 16px;
+}
+.thanks_link {
+	margin-top: 32px;
+}
+
 }
 
 /* Адаптив на маленькие ноутбуки */
@@ -935,6 +943,21 @@ footer .header_logo {
 .address {
 	padding-left: 24px;
 }
+
+/* СТраница Благодарности */
+.thanks_wrap {
+	margin-right: 40px;
+	min-width: 300px;
+}
+
+.thanks_title {
+	font-size: 30px;
+}
+
+.thanks_text {
+	font-size: 15px;
+}
+
 }
 
 /* Адаптив на планшеты */
@@ -944,6 +967,7 @@ footer .header_logo {
 .title_level_2 {
 	font-weight: 600;
 	font-size: 32px;
+	line-height: 1.25;
 }
 
 /* Главный экран */
@@ -1300,6 +1324,23 @@ footer .header_logo {
 	font-size: 24px;
 }
 
+/* СТраница Благодарности */
+.thanks {
+	padding-top: 40px;
+}
+
+.thanks_wrap {
+	min-width: 320px;
+}
+
+.thanks_title {
+	font-size: 28px;
+}
+
+.thanks_link {
+	margin-top: 32px;
+}
+
 }
 
 @media (max-width: 680px) {
@@ -1437,6 +1478,32 @@ footer .header_logo {
 	width: 100%;
 }
 
+/* СТраница Благодарности */
+.thanks_row {
+	flex-direction: column;
+}
+
+.thanks_wrap {
+	order: 1;
+	margin-right: 0;
+	max-width: none;
+	min-width: auto;
+}
+
+.thanks_text {
+	font-size: 14px;
+	margin-top: 24px;
+}
+
+.thanks_link {
+	margin: 28px 0 0;
+}
+
+.thanks_img {
+	max-width: 320px;
+	width: 100%;
+}
+
 }
 
 @media (max-width: 575px) {
@@ -1543,7 +1610,8 @@ footer .header_logo {
 .catalog_row,
 .submenu_blocks,
 .footer_row,
-#banners .container {
+#banners .container,
+.thanks_row {
 	padding: 0 20px;
 }
 
@@ -1680,6 +1748,10 @@ footer .header_logo {
 
 #map {
 	margin: auto;
+}
+
+.modal_title {
+	font-size: 22px;
 }
 
 }

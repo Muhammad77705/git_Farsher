@@ -26,28 +26,19 @@ $(function(){
     slidesToScroll: 1,
     asNavFor: '.popup_slider_main',
     // centerMode: true,
-    focusOnSelect: true,
+    focusOnSelect: true
     
   });
 
-  // var len_fit = 7; // According to your question, 10 letters can fit in.
-  // var un = $('.banner_title');
-  // // Get the lenght of user name.
-  // var len_user_name = un.html().length;
-  // console.log(len_user_name); //5
-  // for (var a = 0; a < .length; index++) {
-  //   const element = array[index];
-    
-  // }
-  //   if(len_fit < len_user_name ){
-  //   // Calculate the new font size.
-  //     var size_now = parseInt(un.css("font-size"));
-  //     console.log(size_now);
-  //     var size_new = size_now * len_fit/len_user_name;
-  //     console.log(size_new);
-  //   // Set the new font size to the user name.
-  //   un.css("font-size",size_new); 
-  // }
+  // Текст в баннере
+  var len_fit = 7;
+  $(".banner_title").each(function () {
+    if ($(this).html().length > len_fit) {
+      var size_now = parseInt($(this).css("font-size"));
+      var size_new = size_now * len_fit / $(this).html().length;
+      $(this).css("font-size", size_new)
+    }
+  });
 
   // Выпадающее меню
   $('.menu_mobile').click(function (e) {
@@ -83,6 +74,10 @@ $(function(){
     $(this).addClass("popup_block_active").children('input');
   });
 
+  $('.popup_block:last').click(function () {
+    $('.popup_footer_text').addClass('popup_text_active');
+  });
+
   // Переключатель кнопок маринада
   $('.popup_marinades .marinades_btn').click(function () {
     $(this).siblings().removeClass("marinade_checked");
@@ -90,6 +85,10 @@ $(function(){
     var data_btn = $(this).attr('data-marinade');
     $(this).parent().siblings('.popup_info').children('.product_price').children().text(data_btn);
   });	
+
+  $('.popup_close_btn').click(function () {
+    $('.product_popup').removeClass('product_popup_active');
+  });
 
 
 // Табы на главное странице

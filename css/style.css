@@ -1064,7 +1064,8 @@ p {
 .product_btn:hover,
 .proceed_btn_link:hover,
 .social_callback:hover,
-.form_btn:hover {
+.form_btn:hover,
+.popup_footer_btn:hover,\ {
 	color: var(--white);
 	background-color: var(--red_hover);
 }
@@ -1073,7 +1074,8 @@ p {
 .product_btn:active,
 .proceed_btn_link:active,
 .social_callback:active,
-.form_btn:active {
+.form_btn:active,
+.popup_footer_btn:active {
 	background-color: var(--red_active);
 }
 
@@ -1220,7 +1222,7 @@ p {
 }
 
 .popup_slider_main.slick-slider {
-	width: calc(541px - 48px);
+	width: calc(528px - 48px);
 }
 
 .product_popup .slick-prev,
@@ -1230,6 +1232,7 @@ p {
 	border: 1px solid var(--bdgrey);
 	border-radius: 50%;
 	background-color: var(--white);
+	z-index: 6;
 }
 
 .product_popup .slick-prev:before,
@@ -1243,12 +1246,13 @@ p {
 }
 
 .product_popup .slick-prev  {
+	left: 0;
 	transform: translate(-50%,-50%) rotate(180deg);
 }
 
 .product_popup .slick-next {
 	right: 0;
-	transform: translate(50%,-50%);
+	transform: translate(0,-50%);
 }
 
 .product_popup .slick-prev.slick-disabled:before,
@@ -1276,23 +1280,23 @@ p {
 }
 
 .popup_slider_items {
-	width: calc(540px - 24px);
+	width: calc(528px - 24px);
 	margin: 0 0 24px 24px;
 }
 
 .popup_slider_items img {
 	width: 80px;
 	height: 80px;
-	padding: 0 8px;
+	margin: 0 8px;
 	border-radius: 4px;
 }
 
 .popup_slider_items div:first-child img {
-	padding-left: 0;
+	margin-left: 0;
 }
 
 .popup_slider_items div:last-child img {
-	padding-right: 0;
+	margin-right: 0;
 }
 
 .popup_wrap {
@@ -1300,6 +1304,7 @@ p {
 
 .product_popup .popup_wrap {
 	max-width: 1120px;
+	padding: 0;
 }
 
 .popup_row {
@@ -1462,11 +1467,56 @@ p {
 .popup_footer {
 	display: flex;
 	justify-content: flex-end;
-	margin: auto 24px 24px;
+	align-items: center;
+	margin: 24px;
+}
+
+.popup_footer_text {
+	flex-basis: 310px;
+	position: relative;
+	font-size: 12px;
+	line-height: 18px;
+	padding: 16px;
+	text-align: left;
+	border: 1px solid var(--bdgrey);
+	border-radius: 4px;
+	visibility: hidden;
+	opacity: 0;
+	transition: .4s var(--effect);
+}
+
+.popup_footer_text:after {
+  content: '';
+  width: 14px;
+  height: 14px;
+  display: block;
+	position: absolute;
+	top: -8px;
+	left: 50%;
+  border-bottom: 1px solid var(--bdgrey);
+  border-left: 1px solid var(--bdgrey);
+  -webkit-transform: translate(-50%, 0) rotate(135deg);
+  transform: translate(-50%, 0) rotate(135deg);
+	background: linear-gradient(45deg, #fff 50%, rgba(255, 255, 255, 0) 50%);
+}
+
+.popup_text_active {
+	visibility: visible;
+	opacity: 1;
 }
 
 .popup_footer_btn {
-	flex-basis: 35%;
+	margin-left: 18px;
+	padding: 15px 32px;
+	flex-basis: auto;
+	white-space: nowrap;
+}
+
+.popup_close_btn {
+	display: none;
+	color: var(--grey);
+	border: 1px solid var(--bdgrey);
+	background-color: transparent
 }
 
 
@@ -2265,13 +2315,20 @@ p {
 }
 
 /* Страница Благодарности */
-.sas {
-	padding: 326px 0;
+.thanks {
+	padding: 48px 0 64px;
+}
+
+.thanks_row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .thanks_wrap {
 	max-width: 500px;
 	width: 100%;
+	margin-right: 60px;
 }
 
 .thanks_text {

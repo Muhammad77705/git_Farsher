@@ -25,13 +25,33 @@ $(function(){
     slidesToShow: 5,
     slidesToScroll: 1,
     asNavFor: '.popup_slider_main',
-    // centerMode: true,
-    focusOnSelect: true
+    focusOnSelect: true,
+    responsive: [
+      {
+        breakpoint: 770,
+        settings: {
+          arrows: false
+        }
+      }
+    ]
     
   });
 
   // Текст в баннере
   var len_fit = 7;
+
+  if ($(this).width() <= 1200) {
+    var len_fit = 9;
+  }
+
+  if ($(this).width() <= 769) {
+    var len_fit = 6;
+  }
+
+  if ($(this).width() <= 480) {
+    var len_fit = 10;
+  }
+
   $(".banner_title").each(function () {
     if ($(this).html().length > len_fit) {
       var size_now = parseInt($(this).css("font-size"));
@@ -87,7 +107,15 @@ $(function(){
   });	
 
   $('.popup_close_btn').click(function () {
-    $('.product_popup').removeClass('product_popup_active');
+    $('.product_popup').removeClass('product_popup_active'); 
+    $('body').removeClass('body_hidden');
+  });
+
+  $('.popup_add_cart').click(function () {
+    $(this).hide();
+    $('.popup_hidden_btn').show();
+    $('.popup_close_btn').show();
+    $('.popup_footer_text').hide();
   });
 
 
@@ -101,12 +129,14 @@ $(function(){
     $('.nav_banner').removeAttr('style');
   });
 
-  $('.product_btn').click(function (e) {
+  $('.product_btn').click(function () {
     $('.product_popup').addClass('product_popup_active');
+    $('body').addClass('body_hidden');
   });
 
   $('.popup_close').click(function () {
     $('.product_popup').removeClass('product_popup_active');
+    $('body').removeClass('body_hidden');
   });
 
   $('.social_callback').click(function () {

@@ -56,6 +56,10 @@ footer .header_logo {
 	padding: 80px 0;
 }
 
+.banner_carousel_item .container {
+  height: 76%;
+}
+
 .banner_title {
 	font-size: 80px;
 }
@@ -78,6 +82,10 @@ footer .header_logo {
 	max-width: none;
 	width: 85%;
 	padding: 0 15px;
+}
+
+.banner_carousel_item .container {
+  height: 71%;
 }
 
 .banner_icon {
@@ -231,9 +239,8 @@ footer .header_logo {
 	width: 50px;
 }
 
-.text_summ,
-.cart_block_close {
-	margin-left: 50px;
+.text_summ {
+	margin: 0;
 }
 
 .cart_price_summ {
@@ -259,6 +266,121 @@ footer .header_logo {
 }
 .thanks_link {
 	margin-top: 32px;
+}
+
+/* popup */
+
+.product_popup {
+	overflow: auto;
+}
+
+.product_popup .popup_wrap {
+	top: 0;
+	transform: translateY(0);
+	max-width: 550px;
+}
+
+.product_popup  .popup_mobile_close {
+	display: block;
+	align-self: flex-end;
+	margin: 24px 20px 4px;
+}
+
+.popup_close {
+	display: none;
+}
+
+.popup_row {
+	flex-direction: column;
+}
+
+.popup_slider_main.slick-slider,
+.popup_slider_items {
+	width: auto;
+}
+
+.popup_slider_main img {
+	height: 100%;
+}
+
+.popup_slider_main {
+	height: 310px;
+	margin: 20px;
+}
+
+.popup_slider_items {
+  margin: 0 0 20px 20px;
+}
+
+.marinades_btn {
+	font-size: 18px;
+}
+
+.popup_label {
+	margin-bottom: 24px;
+}
+
+.popup_block_overlay {
+	flex-direction: column;
+}
+
+.popup_col {
+	justify-content: space-between;
+	align-items: center;
+}
+
+.popup_col:last-child {
+	margin-top: 20px;
+}
+
+.popup_header {
+	padding: 20px 20px 8px;
+}
+
+.popup_marinades {
+	padding: 24px 20px;
+}
+
+.popup_header {
+	border-bottom: none;
+	border-top: 1px solid var(--bdgrey);
+}
+
+.popup_footer_text {
+	flex-basis: 100%;
+	padding: 14px;
+	margin-bottom: 16px;
+}
+
+.popup_block {
+  padding: 20px;
+	margin: 0 20px;
+}
+
+.product_popup .popup_text_summ {
+	margin: 0;
+}
+
+.popup_footer {
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 24px 20px 16px;
+} 
+
+.popup_footer_text {
+	opacity: 1;
+	visibility: visible;
+	display: none;
+}
+
+.popup_text_active {
+	display: block;
+}
+
+.popup_footer_btn {
+	flex-basis: 100%;
+	margin: 0;
+	margin-bottom: 16px;
 }
 
 }
@@ -697,6 +819,10 @@ footer .header_logo {
 	padding: 50px 0;
 }
 
+.banner_carousel_item .container {
+  height: 66%;
+}
+
 .banner_content {
 	max-width: 320px;
 }
@@ -708,6 +834,7 @@ footer .header_logo {
 .banner_descr {
 	font-size: 16px;
 	line-height: 19px;
+	height: calc(19px * 3);
 }
 
 .banner_cart {
@@ -852,6 +979,10 @@ footer .header_logo {
 .cart_price,
 .cart_kg  {
 	display: none;
+}
+
+.popup_text_summ {
+	display: block;
 }
 
 .cart_descr {
@@ -1010,6 +1141,7 @@ footer .header_logo {
 .banner_descr {
 	font-size: 15px;
 	line-height: 18px;
+	height: calc(18px * 3);
 }
 
 .nav_banner {
@@ -1162,6 +1294,11 @@ footer .header_logo {
 	width: 100%;
 	padding-left: 20px;
 	padding-right: 20px;
+}
+
+.header_items {
+	padding-left: 0;
+	padding-right: 0;
 }
 
 /* #catalog {
@@ -1330,6 +1467,8 @@ footer .header_logo {
 }
 
 .thanks_wrap {
+	display: flex;
+	flex-direction: column;
 	min-width: 320px;
 }
 
@@ -1338,7 +1477,73 @@ footer .header_logo {
 }
 
 .thanks_link {
+	align-self: center;
+	flex-basis: auto;
 	margin-top: 32px;
+	max-width: 375px;
+	width: 100%;
+}
+
+/* popup */
+
+.product_popup .popup_wrap {
+	max-width: 480px;
+}
+
+.popup_slider_items ,
+.popup_slider_main {
+	margin-bottom: 8px;
+}
+
+.popup_slider_main.slick-slider {
+	height: 270px;
+	width: 100%;
+	margin: 0;
+	margin-top: 20px;
+}
+
+.popup_slider_items img {
+	width: 65px;
+	height: 65px;
+	margin: 0 4px;
+}
+
+.popup_slider_items {
+	margin-top: 8px;
+	margin-left: 8px;
+}
+
+.popup_product_title {
+	font-size: 20px;
+}
+
+.marinades_btn {
+	font-size: 14px;
+	line-height: 18px;
+	padding: 12px;
+}
+
+.popup_label {
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.popup_block_overlay {
+	padding: 3px 0;
+}
+
+.popup_block {
+	padding: 16px 16px 20px;
+}
+
+.popup_slider_main img {
+	border-radius: 0;
+}
+
+.product_popup .slick-prev, .product_popup .slick-next {
+	height: 0;
+	width: 0;
+	overflow: hidden;
 }
 
 }
@@ -1500,8 +1705,9 @@ footer .header_logo {
 }
 
 .thanks_img {
-	max-width: 320px;
+	max-width: 250px;
 	width: 100%;
+	margin-bottom: 30px;
 }
 
 }
@@ -1593,6 +1799,10 @@ footer .header_logo {
 .catalog_nav_link  {
 	font-size: 12px;
 	line-height: 15px;
+}
+
+.popup_slider_main.slick-slider {
+	height: 240px;
 }
 
 }
